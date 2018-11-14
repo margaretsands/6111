@@ -77,10 +77,11 @@ module labkit(
     wire [9:0] hcount;
     wire [9:0] vcount;
     wire hsync, vsync, at_display_area;
+    wire [23:0] pixel;
     vga vga1(.vga_clock(clock_25mhz),.hcount(hcount),.vcount(vcount),
           .hsync(hsync),.vsync(vsync),.at_display_area(at_display_area));
-        
-    assign VGA_R = at_display_area ? {4{hcount[7]}} : 0;
+    screamyBird scgame(.clk(clock_25mhz),.pixel(pixel));
+    assign VGA_R = at_display_area ? pixel[23:19 : 0;
     assign VGA_G = 0;
     assign VGA_B = 0;
     assign VGA_HS = ~hsync;
@@ -148,6 +149,66 @@ module vga(input vga_clock,
    end
 
    assign at_display_area = ((hcount >= 0) && (hcount < 640) && (vcount >= 0) && (vcount < 480));
+
+endmodule
+
+//////////////////////////////////////////////////////////////////////
+//
+// blob: generate rectangle on screen
+//
+//////////////////////////////////////////////////////////////////////
+module blob
+   #(parameter WIDTH = 64,            // default width: 64 pixels
+               HEIGHT = 64,           // default height: 64 pixels
+               COLOR = 24'hFF_FF_FF)  // default color: white
+   (input [9:0] x,hcount,
+    input [9:0] y,vcount,
+    output reg [23:0] pixel);
+
+   always @ * begin
+      if ((hcount >= x && hcount < (x+WIDTH)) &&
+	 (vcount >= y && vcount < (y+HEIGHT)))
+	pixel = COLOR;
+      else pixel = 0;
+   end
+endmodule
+
+module screamyBird (
+    input clk,
+    output [23:0] pixel
+);
+    wire [9:0] hcount;
+    wire [9:0] vcount;
+    wire [9:0] character_height;
+    wire hsync, vsync, at_display_area;
+    gameFSM game(.clk(clk),.hsync(hsync), .hcount(hcount),.vcount(vcount),.vsync(vsync), .character_height(character_height));
+    characterSpriteGenerator cspritegen(.character_height(character_height),.hcount(hcount),.vcount(vcount),.charapixel(pixel));
+endmodule
+
+module gameFSM (
+    //game FSM inputs will go here after being debounced
+    input clk,
+    output hsync,
+    output vsync,
+    output [10:0] hcount,
+    output [9:0] vcount,
+    output [9:0] character_height
+    );
+    wire at_display_area;
+    vga vga1(.vga_clock(clk),.hcount(hcount),.vcount(vcount),
+      .hsync(hsync),.vsync(vsync),.at_display_area(at_display_area));
+    
+endmodule
+
+module characterSpriteGenerator(
+    input [9:0] character_height,
+    input [9:0] hcount,
+    input [9:0] vcount,
+    input clk,
+    output [23:0] charapixel
+);
+    
+    blob charactersprite(.x(9'd512),.y(character_height),.hcount(hcount), .vcount(vcount), .pixel(charapixel));
 
 endmodule
 
