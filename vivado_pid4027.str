@@ -1,0 +1,607 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+Process ID: 4027
+
+Current time: 	11/14/18 5:02:27 PM EST
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: NAME="Ubuntu"
+Version: 4.2.0-42-generic
+Architecture: amd64
+Available processors (cores): 8
+
+DISPLAY: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	/var/local/xilinx-local/Vivado/2016.2/tps/lnx64/jre
+
+User name: 	joannas
+User home directory: /afs/athena.mit.edu/user/j/o/joannas
+User working directory: /afs/athena.mit.edu/user/j/o/joannas/6111
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: /var/local/xilinx-local/Vivado
+RDI Data directory: /var/local/xilinx-local/Vivado/2016.2/data
+RDI Bin directory: /var/local/xilinx-local/Vivado/2016.2/bin
+
+Vivado preferences path: /afs/athena.mit.edu/user/j/o/joannas/.Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: /afs/athena.mit.edu/user/j/o/joannas/.Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	158 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,940 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 29 MB (+28217kb) [00:00:04]
+// [Engine Memory]: 4,863 MB (+4947380kb) [00:00:04]
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create New Project"); // l:JideButton (JPanel:JComponent, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// [GUI Memory]: 41 MB (+11199kb) [00:00:04]
+// [GUI Memory]: 47 MB (+3315kb) [00:00:04]
+// h:g (cv:JFrame): New Project: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 4,952 MB. GUI used memory: 24 MB. Current time: 11/14/18 5:02:28 PM EST
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, h:g)
+// Elapsed time: 13 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "final_project"); // ao:JTextField (JPanel:JComponent, h:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, h:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, h:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // y:JideButton (CommandBar:DockableBar, h:g)
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // af:JMenuItem (am:JPopupMenu, h:g)
+// Elapsed time: 32 seconds
+setFileChooser("/afs/athena.mit.edu/user/j/o/joannas/6111/joannalab3.v");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // y:JideButton (CommandBar:DockableBar, h:g)
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // af:JMenuItem (am:JPopupMenu, h:g)
+// [GUI Memory]: 52 MB (+3404kb) [00:01:06]
+// Elapsed time: 53 seconds
+setFileChooser("/afs/athena.mit.edu/user/j/o/joannas/Documents/6.111/Labs/lab4/lab4.srcs/sources_1/imports/Labs/display_8hex.v");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // y:JideButton (CommandBar:DockableBar, h:g)
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // af:JMenuItem (am:JPopupMenu, h:g)
+// Elapsed time: 17 seconds
+dismissFileChooser();
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, h:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, h:g)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a:JButton (F:JPanel, h:g)
+// Elapsed time: 10 seconds
+setFileChooser("/afs/athena.mit.edu/user/j/o/joannas/Documents/6.111/Labs/lab4/lab4.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc");
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, h:g)
+// HMemoryUtils.trashcanNow. Engine heap size: 4,971 MB. GUI used memory: 26 MB. Current time: 11/14/18 5:05:18 PM EST
+// Elapsed time: 14 seconds
+selectButton(PAResourceOtoP.PartChooser_BOARDS, "Boards"); // m:s (JPanel:JComponent, h:g): TRUE
+selectButton(PAResourceOtoP.PartChooser_PARTS, "Parts"); // m:s (F:JPanel, h:g): TRUE
+selectButton(PAResourceOtoP.PartChooser_BOARDS, "Boards"); // m:s (JPanel:JComponent, h:g): TRUE
+selectTable(PAResourceOtoP.PartChooser_BOARDS, "Nexys4 DDR ; digilentinc.com ; C.1 ; xc7a100tcsg324-1 ; 324 ; 1.1 ; 135 ; 240 ; 126800 ; 0 ; 0 ; 210 ; 63400 ; 6 ; 1 ; 85 ; 0 ; 85 ; C ; 1.05 ; 0.95 ; 0.95 ; 0 ; 0 ; 0 ; 0 ; 0", 7, "Nexys4 DDR", 0); // P:v (JViewport:JComponent, h:g)
+selectTable(PAResourceOtoP.PartChooser_BOARDS, "Nexys4 ; digilentinc.com ; B.1 ; xc7a100tcsg324-1 ; 324 ; 1.1 ; 135 ; 240 ; 126800 ; 0 ; 0 ; 210 ; 63400 ; 6 ; 1 ; 85 ; 0 ; 85 ; C ; 1.05 ; 0.95 ; 0.95 ; 0 ; 0 ; 0 ; 0 ; 0", 6, "Nexys4", 0); // P:v (JViewport:JComponent, h:g)
+// Elapsed time: 18 seconds
+selectButton(PAResourceOtoP.PartChooser_PARTS, "Parts"); // m:s (F:JPanel, h:g): TRUE
+// [GUI Memory]: 57 MB (+1821kb) [00:03:25]
+selectComboBox(PAResourceOtoP.PartChooser_FAMILY_CHOOSER, "Artix-7", 1); // ak:N (JPanel:JComponent, h:g)
+// Elapsed time: 12 seconds
+selectTable(PAResourceOtoP.PartChooser_PARTS, "xc7a100tcsg324-3 ; 324 ; 135 ; 240 ; 126800 ; 0 ; 0 ; 210 ; 63400 ; 6 ; 1 ; 85 ; 0 ; 85 ; C ; 1.05 ; 0.95 ; 0.95", 95, "xc7a100tcsg324-3", 0); // P:v (JViewport:JComponent, h:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, h:g)
+// bL:g (h:g):  Create Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: create_project final_project /afs/athena.mit.edu/user/j/o/joannas/6111/final_project -part xc7a100tcsg324-3 
+// TclEventType: PROJECT_NEW
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/var/local/xilinx-local/Vivado/2016.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 61 MB (+1707kb) [00:03:50]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: add_files -norecurse -scan_for_includes {/afs/athena.mit.edu/user/j/o/joannas/6111/joannalab3.v /afs/athena.mit.edu/user/j/o/joannas/Documents/6.111/Labs/lab4/lab4.srcs/sources_1/imports/Labs/display_8hex.v} 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -force -norecurse 
+// Tcl Message: INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1' 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -fileset constrs_1 -force -norecurse /afs/athena.mit.edu/user/j/o/joannas/Documents/6.111/Labs/lab4/lab4.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc 
+// [GUI Memory]: 67 MB (+2803kb) [00:03:50]
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, h:g)
+// 'g' command handler elapsed time: 226 seconds
+dismissDialog("Create Project"); // bL:g (h:g)
+dismissDialog("New Project"); // h:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,033 MB. GUI used memory: 30 MB. Current time: 11/14/18 5:06:13 PM EST
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, display_8hex (display_8hex.v)]", 2, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab3 (joannalab3.v)]", 1, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab3 (joannalab3.v)]", 1, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// Elapsed time: 27 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+// [GUI Memory]: 71 MB (+355kb) [00:04:22]
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Customize Commands"); // ab:JMenu (JPopupMenu:JComponent, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (cv:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (F:JPanel, b:g)
+// [GUI Memory]: 75 MB (+1136kb) [00:04:39]
+// Elapsed time: 10 seconds
+setFileChooser("/afs/athena.mit.edu/user/j/o/joannas/Documents/6.111/Labs/lab4/lab4.srcs/sources_1/imports/Labs/labkit_lab4.v");
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'h' command handler elapsed time: 17 seconds
+dismissDialog("Add Sources"); // b:g (cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: add_files -norecurse -scan_for_includes /afs/athena.mit.edu/user/j/o/joannas/Documents/6.111/Labs/lab4/lab4.srcs/sources_1/imports/Labs/labkit_lab4.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -norecurse /afs/athena.mit.edu/user/j/o/joannas/Documents/6.111/Labs/lab4/lab4.srcs/sources_1/imports/Labs/labkit_lab4.v 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 79 MB (+164kb) [00:04:47]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labkit (labkit_lab4.v)]", 8, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labkit (labkit_lab4.v), ig_switch_sync - synchronize]", 16, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+selectCodeEditor("labkit_lab4.v", 10, 160); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 351, 409); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 305, 388); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 77, 489); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("labkit_lab4.v", 406, 562); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 28 seconds
+selectCodeEditor("labkit_lab4.v", 135, 350); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 63, 35); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 164, 117); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 88, 95); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 101, 123); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 203, 214); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 28, 538); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 220, 503); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 71, 100); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 71, 244); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 231, 312); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 165, 201); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 381, 423); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 264, 369); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 250, 353); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 589, 357); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 22 seconds
+selectCodeEditor("labkit_lab4.v", 27, 132); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 124, 232); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 55, 137); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 262, 266); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 21, 363); // bH:N (JPanel:JComponent, cv:JFrame)
+// [GUI Memory]: 83 MB (+136kb) [00:07:31]
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab3 (joannalab3.v), db1 - debounce (joannalab3.v)]", 2, false); // z:k (G:JPanel, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 330, 96); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab3 (joannalab3.v), db1 - debounce (joannalab3.v)]", 2, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab3 (joannalab3.v), db3 - debounce (joannalab3.v)]", 5, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab3 (joannalab3.v), db2 - debounce (joannalab3.v)]", 4, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab3 (joannalab3.v), xvga1 - xvga (joannalab3.v)]", 6, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab3 (joannalab3.v), pg - pong_game (joannalab3.v)]", 7, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab3 (joannalab3.v), xvga1 - xvga (joannalab3.v)]", 6, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab3 (joannalab3.v), xvga1 - xvga (joannalab3.v)]", 6, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+selectCodeEditor("joannalab3.v", 180, 240); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("joannalab3.v", 140, 99); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("joannalab3.v", 77, 181); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("joannalab3.v", 196, 513); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("joannalab3.v", 209, 91); // bH:N (JPanel:JComponent, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "labkit_lab4.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 20, 277); // bH:N (JPanel:JComponent, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joannalab3.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectCodeEditor("joannalab3.v", 60, 539); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("joannalab3.v", 571, 158); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 11 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank", true); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank", true); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "blank"); // o:ao (az:f, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "labkit_lab4.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 71, 304); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 595, 292); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 291, 354); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 424, 358); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 428, 334); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 117, 322); // bH:N (JPanel:JComponent, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "joannalab3.v", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+// [GUI Memory]: 88 MB (+831kb) [00:09:38]
+selectCodeEditor("joannalab3.v", 142, 499); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("joannalab3.v", 130, 539); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("joannalab3.v", 116, 348); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "joannalab3.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("joannalab3.v", 824, 409); // bH:N (JPanel:JComponent, cv:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "labkit_lab4.v", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 105, 549); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 99, 562); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "labkit_lab4.v", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("labkit_lab4.v", 248, 392); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 235, 391); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 214, 382); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 262, 379); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 15, 348); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 14 seconds
+selectCodeEditor("labkit_lab4.v", 187, 230); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 154, 233); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 121, 233); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 66, 229); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 74, 183); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 84, 113); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 80, 114); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 252, 586); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("labkit_lab4.v", 392, 303); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 526, 308); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 525, 307, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+typeControlKey((HResource) null, "labkit_lab4.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 366, 231); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "labkit_lab4.v", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 498, 231); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 532, 307); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("labkit_lab4.v", 530, 402); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 15 seconds
+selectCodeEditor("labkit_lab4.v", 137, 365); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 31 seconds
+selectCodeEditor("labkit_lab4.v", 371, 436); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 15 seconds
+selectCodeEditor("labkit_lab4.v", 63, 384); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 65, 384, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+typeControlKey((HResource) null, "labkit_lab4.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 269, 530); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 479, 526); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 479, 526); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 25 seconds
+selectCodeEditor("labkit_lab4.v", 36, 114); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 292, 314); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 40, 447); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 304, 82); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 469, 497); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 169, 508); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 487, 440); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("labkit_lab4.v", 321, 515); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 202, 453); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 309, 143); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 47 seconds
+selectCodeEditor("labkit_lab4.v", 363, 319); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 80, 339); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 43, 337); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 27, 346); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 27, 345); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 30, 328); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 39, 338); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 18 seconds
+selectCodeEditor("labkit_lab4.v", 22, 349); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "labkit_lab4.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 319, 160); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 142, 145); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey((HResource) null, "labkit_lab4.v", 'v'); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 180, 144); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 92 seconds
+selectCodeEditor("labkit_lab4.v", 638, 457); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 66 seconds
+selectCodeEditor("labkit_lab4.v", 739, 530); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 837, 464); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 19 seconds
+selectCodeEditor("labkit_lab4.v", 678, 453); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("labkit_lab4.v", 539, 533); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 564, 470); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 422, 511); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 906, 463); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 257, 456); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 381, 488); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 443, 471); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 168, 398); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 34 seconds
+selectCodeEditor("labkit_lab4.v", 225, 556); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 260, 441); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("labkit_lab4.v", 260, 458); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 27 seconds
+selectCodeEditor("labkit_lab4.v", 303, 443); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 331, 438); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 17 seconds
+selectCodeEditor("labkit_lab4.v", 262, 441); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 296, 459); // bH:N (JPanel:JComponent, cv:JFrame)
+typeControlKey(null, null, 'z');
+selectCodeEditor("labkit_lab4.v", 251, 460); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 325, 476); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 210, 443); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 256, 476); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 232, 484); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 243, 449); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 227, 514); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 5,052 MB. GUI used memory: 33 MB. Current time: 11/14/18 5:23:53 PM EST
+// Elapsed time: 24 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lab3 (joannalab3.v)]", 1, true, false, false, false, true, false); // z:k (G:JPanel, cv:JFrame) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_IMPORT_ALL_SRCS, "Copy All Files Into Project"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aB:g (cv:JFrame): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aB:g)
+// TclEventType: DG_GRAPH_STALE
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D:b
+dismissDialog("Remove Sources"); // aB:g (cv:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/joannas/6111/joannalab3.v 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, display_8hex (display_8hex.v)]", 5, false); // z:k (G:JPanel, cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 18, true); // x:Y (w:G, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Wed Nov 14 17:24:32 2018] Launched synth_1... Run output will be captured here: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "synth_1 ; constrs_1 ; Running synth_design... ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Wed Nov 14 17:24:32 EST 2018 ; 00:00:00 ; Vivado Synthesis Defaults (Vivado Synthesis 2016) ; xc7a100tcsg324-3 ;  ; Vivado Synthesis Defaults", 0, "synth_1", 0, true); // W:as (JViewport:JComponent, cv:JFrame) - Node
+// PAPropertyPanels.initPanels (synth_1) elapsed time: 0.4s
+// TclEventType: RUN_FAILED
+// ap:G (cv:JFrame): Synthesis Failed: addNotify
+// Elapsed time: 10 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ap:G (cv:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-448] named port connection 'pixel_clk' does not exist for instance 'blob1' of module 'blob' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:161]. ]", 1, false); // al:k (JViewport:JComponent, cv:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-448] named port connection 'pixel_clk' does not exist for instance 'blob1' of module 'blob' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:161]. ]", 1, false, false, false, false, false, true); // al:k (JViewport:JComponent, cv:JFrame) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("labkit_lab4.v", 538, 580); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 580, 335); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Wed Nov 14 17:25:26 2018] Launched synth_1... Run output will be captured here: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false, false, false, false, true, false); // x:Y (w:G, cv:JFrame) - Popup Trigger
+// TclEventType: RUN_COMPLETED
+// ap:G (cv:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 30 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ap:G)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bL:g (cv:JFrame):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Wed Nov 14 17:25:59 2018] Launched impl_1... Run output will be captured here: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bL:g (cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 39, 60); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: RUN_STEP_COMPLETED
+selectCodeEditor("labkit_lab4.v", 360, 400); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 360, 400, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+typeControlKey((HResource) null, "labkit_lab4.v", 'c'); // bH:N (JPanel:JComponent, cv:JFrame)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset", true); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset", true); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reset"); // o:ao (az:f, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 349, 289); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 380, 293); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 333, 452); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 15 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-689] width (10) of port connection 'x' does not match port width (11) of module 'blob__parameterized0' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:167]. ]", 1, false); // al:k (JViewport:JComponent, cv:JFrame)
+// Elapsed time: 16 seconds
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // h:JCheckBox (JPanel:JComponent, cv:JFrame): FALSE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 21, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton("PAResourceQtoS.RunRun_COMPLETED_IMPLEMENTATION_RUN_EXISTS_Cancel", "Cancel"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+closeFrame(PAResourceOtoP.PAViews_MESSAGES, "Messages"); // ao:DockableFrame (FrameContainer:JideTabbedPane, cv:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 26, true); // x:Y (w:G, cv:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager]", 26, true); // x:Y (w:G, cv:JFrame) - Node
+// Tcl Message: open_hw 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,072 MB. GUI used memory: 41 MB. Current time: 11/14/18 5:27:23 PM EST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager]", 26, true); // x:Y (w:G, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Open Target]", 27, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Open Target]", 27, false); // x:Y (w:G, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // af:JMenuItem (am:JPopupMenu, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2016.2   **** Build date : Jun  2 2016-16:54:00     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_TARGET_CHANGE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000 
+// Tcl Message: ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Xilinx/00000000000000. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-register this hardware target. 
+// Tcl Message: ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors. 

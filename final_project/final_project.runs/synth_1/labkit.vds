@@ -1,0 +1,553 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed Nov 14 17:25:26 2018
+# Process ID: 5129
+# Current directory: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.runs/synth_1
+# Command line: vivado -log labkit.vds -mode batch -messageDb vivado.pb -notrace -source labkit.tcl
+# Log file: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.runs/synth_1/labkit.vds
+# Journal file: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source labkit.tcl -notrace
+Command: synth_design -top labkit -part xc7a100tcsg324-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5134 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1057.336 ; gain = 162.137 ; free physical = 1913 ; free virtual = 12812
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'labkit' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:22]
+INFO: [Synth 8-638] synthesizing module 'vga' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:77]
+INFO: [Synth 8-256] done synthesizing module 'vga' (1#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:77]
+INFO: [Synth 8-638] synthesizing module 'pong_game' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:120]
+	Parameter screen_height bound to: 10'b1100000000 
+	Parameter screen_width bound to: 11'b10000000000 
+	Parameter death_width bound to: 11'b00100000000 
+	Parameter death_height bound to: 10'b0011110000 
+	Parameter paddle_width bound to: 5'b10000 
+	Parameter paddle_height bound to: 10'b0010000000 
+	Parameter paddle_speed bound to: 5'b00100 
+	Parameter alpha_m bound to: 5'b00001 
+	Parameter alpha_log_n bound to: 5'b00011 
+	Parameter alpha_n bound to: 5'b01000 
+INFO: [Synth 8-638] synthesizing module 'blob' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:237]
+	Parameter WIDTH bound to: 11'b00100000000 
+	Parameter HEIGHT bound to: 10'b0011110000 
+	Parameter COLOR bound to: 24'b111111110000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'blob' (2#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:237]
+INFO: [Synth 8-638] synthesizing module 'blob__parameterized0' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:237]
+	Parameter WIDTH bound to: 5'b10000 
+	Parameter HEIGHT bound to: 10'b0010000000 
+	Parameter COLOR bound to: 24'b111111111111111100000000 
+INFO: [Synth 8-256] done synthesizing module 'blob__parameterized0' (2#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:237]
+WARNING: [Synth 8-689] width (10) of port connection 'x' does not match port width (11) of module 'blob__parameterized0' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:167]
+INFO: [Synth 8-256] done synthesizing module 'pong_game' (3#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:120]
+WARNING: [Synth 8-689] width (10) of port connection 'hcount' does not match port width (11) of module 'pong_game' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:48]
+WARNING: [Synth 8-350] instance 'game1' of module 'pong_game' requires 13 connections, but only 10 given [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:48]
+WARNING: [Synth 8-3848] Net JA in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:29]
+WARNING: [Synth 8-3848] Net LED16_B in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:32]
+WARNING: [Synth 8-3848] Net LED16_G in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:32]
+WARNING: [Synth 8-3848] Net LED16_R in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:32]
+WARNING: [Synth 8-3848] Net LED17_B in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:33]
+WARNING: [Synth 8-3848] Net LED17_G in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:33]
+WARNING: [Synth 8-3848] Net LED17_R in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:33]
+WARNING: [Synth 8-3848] Net LED in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:34]
+WARNING: [Synth 8-3848] Net SEG in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:35]
+WARNING: [Synth 8-3848] Net AN in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:36]
+WARNING: [Synth 8-3848] Net clock_25mhz in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:46]
+WARNING: [Synth 8-3848] Net reset in module/entity labkit does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:48]
+INFO: [Synth 8-256] done synthesizing module 'labkit' (4#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:22]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[4]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[2]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[1]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[0]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED16_B
+WARNING: [Synth 8-3331] design labkit has unconnected port LED16_G
+WARNING: [Synth 8-3331] design labkit has unconnected port LED16_R
+WARNING: [Synth 8-3331] design labkit has unconnected port LED17_B
+WARNING: [Synth 8-3331] design labkit has unconnected port LED17_G
+WARNING: [Synth 8-3331] design labkit has unconnected port LED17_R
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[15]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[14]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[13]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[12]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[11]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[10]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[9]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[8]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[4]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[2]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[1]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[0]
+WARNING: [Synth 8-3331] design labkit has unconnected port SEG[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port SEG[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port SEG[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port SEG[4]
+WARNING: [Synth 8-3331] design labkit has unconnected port SEG[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port SEG[2]
+WARNING: [Synth 8-3331] design labkit has unconnected port SEG[1]
+WARNING: [Synth 8-3331] design labkit has unconnected port SEG[0]
+WARNING: [Synth 8-3331] design labkit has unconnected port AN[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port AN[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port AN[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port AN[4]
+WARNING: [Synth 8-3331] design labkit has unconnected port AN[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port AN[2]
+WARNING: [Synth 8-3331] design labkit has unconnected port AN[1]
+WARNING: [Synth 8-3331] design labkit has unconnected port AN[0]
+WARNING: [Synth 8-3331] design labkit has unconnected port CLK100MHZ
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[15]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[14]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[13]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[12]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[11]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[10]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[9]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[8]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[4]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[2]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[1]
+WARNING: [Synth 8-3331] design labkit has unconnected port SW[0]
+WARNING: [Synth 8-3331] design labkit has unconnected port BTNC
+WARNING: [Synth 8-3331] design labkit has unconnected port BTNL
+WARNING: [Synth 8-3331] design labkit has unconnected port BTNR
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.781 ; gain = 202.582 ; free physical = 1870 ; free virtual = 12769
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin vga1:vga_clock to constant 0 [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:46]
+WARNING: [Synth 8-3295] tying undriven pin game1:vclock to constant 0 [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:48]
+WARNING: [Synth 8-3295] tying undriven pin game1:reset to constant 0 [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:48]
+WARNING: [Synth 8-3295] tying undriven pin game1:switch_sides to constant 0 [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:48]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.781 ; gain = 202.582 ; free physical = 1869 ; free virtual = 12769
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/labkit_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/labkit_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1463.477 ; gain = 0.000 ; free physical = 1574 ; free virtual = 12512
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1573 ; free virtual = 12512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1573 ; free virtual = 12512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1573 ; free virtual = 12512
+---------------------------------------------------------------------------------
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:246]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:247]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:246]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:247]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:246]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:247]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:246]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:247]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:246]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:247]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:246]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:247]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:161]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:161]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1570 ; free virtual = 12509
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 2     
+	   3 Input     11 Bit       Adders := 3     
+	   2 Input     11 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 9     
+	   3 Input     10 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 5     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 5     
+	   3 Input     10 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module vga 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+Module blob 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+Module blob__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+Module pong_game 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 5     
+	   3 Input     10 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 5     
+	   3 Input     10 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1570 ; free virtual = 12509
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design labkit has port VGA_R[3] driven by constant 0
+WARNING: [Synth 8-3917] design labkit has port VGA_R[2] driven by constant 0
+WARNING: [Synth 8-3917] design labkit has port VGA_R[1] driven by constant 0
+WARNING: [Synth 8-3917] design labkit has port VGA_R[0] driven by constant 0
+WARNING: [Synth 8-3917] design labkit has port VGA_B[3] driven by constant 0
+WARNING: [Synth 8-3917] design labkit has port VGA_B[2] driven by constant 0
+WARNING: [Synth 8-3917] design labkit has port VGA_B[1] driven by constant 0
+WARNING: [Synth 8-3917] design labkit has port VGA_B[0] driven by constant 0
+WARNING: [Synth 8-3917] design labkit has port VGA_G[3] driven by constant 0
+WARNING: [Synth 8-3917] design labkit has port VGA_G[2] driven by constant 0
+WARNING: [Synth 8-3917] design labkit has port VGA_G[1] driven by constant 0
+WARNING: [Synth 8-3917] design labkit has port VGA_G[0] driven by constant 0
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[4]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[2]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[1]
+WARNING: [Synth 8-3331] design labkit has unconnected port JA[0]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED16_B
+WARNING: [Synth 8-3331] design labkit has unconnected port LED16_G
+WARNING: [Synth 8-3331] design labkit has unconnected port LED16_R
+WARNING: [Synth 8-3331] design labkit has unconnected port LED17_B
+WARNING: [Synth 8-3331] design labkit has unconnected port LED17_G
+WARNING: [Synth 8-3331] design labkit has unconnected port LED17_R
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[15]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[14]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[13]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[12]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[11]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[10]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[9]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[8]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[4]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[3]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[2]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[1]
+WARNING: [Synth 8-3331] design labkit has unconnected port LED[0]
+WARNING: [Synth 8-3331] design labkit has unconnected port SEG[7]
+WARNING: [Synth 8-3331] design labkit has unconnected port SEG[6]
+WARNING: [Synth 8-3331] design labkit has unconnected port SEG[5]
+WARNING: [Synth 8-3331] design labkit has unconnected port SEG[4]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1570 ; free virtual = 12509
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1570 ; free virtual = 12509
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (game1/y_prime_sign_reg) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/y_reg[9]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/y_reg[8]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/y_reg[7]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/y_reg[6]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/y_reg[5]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/y_reg[4]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/y_reg[3]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/y_reg[2]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/y_reg[1]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/y_reg[0]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/x_prime_sign_reg) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/x_reg[10]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/x_reg[9]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/x_reg[8]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/x_reg[7]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/x_reg[6]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/x_reg[5]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/x_reg[4]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/x_reg[3]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/x_reg[2]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/x_reg[1]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/x_reg[0]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_y_reg[9]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_y_reg[8]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_y_reg[7]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_y_reg[6]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_y_reg[5]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_y_reg[4]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_y_reg[3]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_y_reg[2]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_y_reg[1]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_y_reg[0]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/ongoing_game_reg) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/left_side_play_reg) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_x_reg[9]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_x_reg[8]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_x_reg[7]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_x_reg[6]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_x_reg[5]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_x_reg[4]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_x_reg[3]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_x_reg[2]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_x_reg[1]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/paddle_x_reg[0]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (game1/old_vsync_reg) is unused and will be removed from module labkit.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1562 ; free virtual = 12503
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1562 ; free virtual = 12503
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1581 ; free virtual = 12529
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1581 ; free virtual = 12529
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (vga1/vsync_reg) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/hsync_reg) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/hcount_reg[9]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/hcount_reg[8]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/hcount_reg[7]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/hcount_reg[6]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/hcount_reg[5]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/hcount_reg[4]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/hcount_reg[3]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/hcount_reg[2]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/hcount_reg[1]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/hcount_reg[0]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/vcount_reg[9]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/vcount_reg[8]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/vcount_reg[7]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/vcount_reg[6]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/vcount_reg[5]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/vcount_reg[4]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/vcount_reg[3]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/vcount_reg[2]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/vcount_reg[1]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (vga1/vcount_reg[0]) is unused and will be removed from module labkit.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1553 ; free virtual = 12501
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1553 ; free virtual = 12501
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1553 ; free virtual = 12501
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1549 ; free virtual = 12497
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1549 ; free virtual = 12497
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1549 ; free virtual = 12497
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1549 ; free virtual = 12497
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1549 ; free virtual = 12497
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1549 ; free virtual = 12497
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |OBUF  |    14|
+|2     |OBUFT |    46|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    60|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1549 ; free virtual = 12497
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 146 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1463.477 ; gain = 113.441 ; free physical = 1549 ; free virtual = 12497
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.477 ; gain = 568.277 ; free physical = 1549 ; free virtual = 12497
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 199 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.477 ; gain = 491.719 ; free physical = 1543 ; free virtual = 12493
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1463.477 ; gain = 0.000 ; free physical = 1543 ; free virtual = 12493
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 14 17:25:50 2018...
