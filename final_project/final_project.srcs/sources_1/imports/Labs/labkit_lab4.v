@@ -35,20 +35,54 @@ module labkit(
    output[7:0] SEG,  // segments A-G (0-6), DP (7)
    output[7:0] AN    // Display 0-7
    );
+   
+
+// create 25mhz system clock
+    wire clock_25mhz;
+    clock_quarter_divider clockgen(.clk100_mhz(CLK100MHZ), .clock_25mhz(clock_25mhz));
+
+//  instantiate 7-segment display;  
+    wire [31:0] data;
+    wire [6:0] segments;
+    display_8hex display(.clk(clock_25mhz),.data(data), .seg(segments), .strobe(AN));    
+    assign SEG[6:0] = segments;
+    assign SEG[7] = 1'b1;
+
+//////////////////////////////////////////////////////////////////////////////////
+//
+//  remove these lines and insert your lab here
+
+    assign LED = SW;     
+    assign JA[7:0] = 8'b0;
+    assign data = {28'h0123456, SW[3:0]};   // display 0123456 + SW
+    assign LED16_R = BTNL;                  // left button -> red led
+    assign LED16_G = BTNC;                  // center button -> green led
+    assign LED16_B = BTNR;                  // right button -> blue led
+    assign LED17_R = BTNL;
+    assign LED17_G = BTNC;
+    assign LED17_B = BTNR; 
+
+
+
+//
+//////////////////////////////////////////////////////////////////////////////////
+
+
+
+
  
 //////////////////////////////////////////////////////////////////////////////////
 // sample Verilog to generate color bars
     
     wire [9:0] hcount;
     wire [9:0] vcount;
-    wire [23:0] pixel;
     wire hsync, vsync, at_display_area;
     vga vga1(.vga_clock(clock_25mhz),.hcount(hcount),.vcount(vcount),
           .hsync(hsync),.vsync(vsync),.at_display_area(at_display_area));
-    pong_game game1(.vclock(clock_25mhz), .reset(reset),.up(BTNU),.down(BTND),.pspeed(2'd3),.hcount(hcount),.vcount(vcount),.hsync(hsync),.vsync(vsync),.pixel(pixel));
-    assign VGA_R = pixel[23:20];
-    assign VGA_G = pixel[15:12];
-    assign VGA_B = pixel[7:4];
+        
+    assign VGA_R = at_display_area ? {4{hcount[7]}} : 0;
+    assign VGA_G = 0;
+    assign VGA_B = 0;
     assign VGA_HS = ~hsync;
     assign VGA_VS = ~vsync;
 endmodule
@@ -115,138 +149,5 @@ module vga(input vga_clock,
 
    assign at_display_area = ((hcount >= 0) && (hcount < 640) && (vcount >= 0) && (vcount < 480));
 
-endmodule
-
-module pong_game (
-   input vclock,	// 65MHz clock
-   input reset,		// 1 to initialize module
-   input up,		// 1 when paddle should move up
-   input down,  	// 1 when paddle should move down
-   input [3:0] pspeed,  // puck speed in pixels/tick 
-   input [10:0] hcount,	// horizontal index of current pixel (0..1023)
-   input [9:0] 	vcount, // vertical index of current pixel (0..767)
-   input hsync,		// XVGA horizontal sync signal (active low)
-   input vsync,		// XVGA vertical sync signal (active low)
- 	input switch_sides, //input from button 0, 1 when toggling sides
-	
-   output phsync,	// pong game's horizontal sync
-   output pvsync,	// pong game's vertical sync
-   output [23:0] pixel	// pong game's pixel  // r=23:16, g=15:8, b=7:0 
-   );
-	parameter [9:0] screen_height = 768;
-	parameter [10:0] screen_width = 1024;
-	parameter [10:0] death_width = 256;
-	parameter [9:0] death_height = 240;
-	parameter [4:0] paddle_width = 16;
-	parameter [9:0] paddle_height = 128;
-	parameter [4:0] paddle_speed = 4;
-	parameter [4:0] alpha_m = 1;
-	parameter [4:0] alpha_log_n = 3;
-	parameter [4:0] alpha_n = 8;
-	
-	
-	
-	reg [10:0] x = screen_width/2-death_width/2;
-	reg [9:0] y = screen_height/2-death_height/2;
-	reg x_prime_sign = 1;
-	reg y_prime_sign = 1;
-   	wire [2:0] checkerboard;
-	reg old_vsync=0;
-	reg ongoing_game=1;
-	reg left_side_play=1;
-	
-   assign phsync = hsync;
-   assign pvsync = vsync;
-	wire [23:0] death_pixel;
-	blob #(.WIDTH(death_width), .HEIGHT(death_height), .COLOR(24'hFF_00_00)) blob1(.x(x),.y(y),.hcount(hcount),.vcount(vcount),.pixel(death_pixel));
-	
-	reg[9:0] paddle_y = screen_width/2-paddle_width/2;
-	reg[9:0] paddle_x = 0;
-	wire [23:0] paddle_pixel;
-	blob #(.WIDTH(paddle_width),.HEIGHT(paddle_height),.COLOR(24'hFF_FF_00))   // yellow!
-     paddle1(.x(paddle_x),.y(paddle_y),.hcount(hcount),.vcount(vcount),
-             .pixel(paddle_pixel));
-						 
-	assign pixel = (paddle_pixel || death_pixel);
-	always @ (posedge vclock) begin
-		if ((old_vsync != vsync) && !vsync) begin
-			if (ongoing_game) begin
-				//change x postion
-				if (x_prime_sign) x <= x + pspeed;
-				else x <= x - pspeed;
-				
-				//change y postion
-				if (y_prime_sign) y <= y + pspeed;
-				else y <= y - pspeed;
-				
-				//check if puck is approaching the side walls
-				if ((x < 2*pspeed && !x_prime_sign) || (x > (screen_width-pspeed-death_width) && x_prime_sign)) begin
-						//assume we bounce
-						x_prime_sign <= !x_prime_sign;
-						//check if the approaching side is the one with the paddle
-						if ((x < 2*pspeed && !x_prime_sign && left_side_play) || (x > (screen_width-pspeed-death_width) && x_prime_sign && !left_side_play)) begin
-							//check if the paddle missed
-							if (!((paddle_y >= y && paddle_y <= y+death_height) || (y <= paddle_y+paddle_height && (paddle_height + paddle_y <= y+death_height)))) ongoing_game <= 0;
-						end
-				end	
-				
-				//check if puck is approaching top or bottom wall, flip velocity sign
-				if ((y < 2*pspeed && !y_prime_sign) || ((y > (screen_height-pspeed-death_height)) && y_prime_sign)) y_prime_sign <= !y_prime_sign;
-				
-				//move the paddle up until it reaches the top of the screen
-				if (up) begin
-				if (paddle_y < 2*paddle_speed) paddle_y <= 0;
-				else paddle_y <= paddle_y - paddle_speed;
-				end
-				
-				//move the paddle down until it reaches the bottom edge of the screen
-				if (down) begin
-				if (paddle_y > (screen_height-2*paddle_speed-paddle_height)) paddle_y <= screen_height- paddle_height;
-				else paddle_y <= paddle_y + paddle_speed;
-				end
-				
-				//use game mode to determine the paddle's x location
-				if (left_side_play) paddle_x=0;
-				else paddle_x = screen_width-16;
-			end
-			
-			//reset variables back to the original conditions (except the side of play)	
-			if (reset) begin
-				x <= screen_width/2-death_width/2;
-				y <= screen_height/2-death_height/2;
-				x_prime_sign <= 1;
-				y_prime_sign <= 1;
-				old_vsync <= 0;
-				paddle_y <= screen_height/2-paddle_height/2;
-				ongoing_game <= 1;
-				end
-			
-			//if the side toggle button is pressed, toggle to left side  mode or right side mode depending on current state
-			if (switch_sides) left_side_play <= !left_side_play;
-			
-		end
-		old_vsync <= vsync;
-     end 
-endmodule
-
-//////////////////////////////////////////////////////////////////////
-//
-// blob: generate rectangle on screen
-//
-//////////////////////////////////////////////////////////////////////
-module blob
-   #(parameter WIDTH = 64,            // default width: 64 pixels
-               HEIGHT = 64,           // default height: 64 pixels
-               COLOR = 24'hFF_FF_FF)  // default color: white
-   (input [10:0] x,hcount,
-    input [9:0] y,vcount,
-    output reg [23:0] pixel);
-
-   always @ * begin
-      if ((hcount >= x && hcount < (x+WIDTH)) &&
-	 (vcount >= y && vcount < (y+HEIGHT)))
-	pixel = COLOR;
-      else pixel = 0;
-   end
 endmodule
 
