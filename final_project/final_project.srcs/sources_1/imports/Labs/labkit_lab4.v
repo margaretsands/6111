@@ -85,8 +85,8 @@ module labkit(
     
     assign data = {4'd1, pixel};   // display 0123456 + SW
     assign VGA_R = at_display_area ? pixel[23:20] : 0;
-    assign VGA_G = at_display_area ? 4'b1111 :0;
-    assign VGA_B = 0;
+    assign VGA_G = at_display_area ? pixel[16:13] :0;
+    assign VGA_B = at_display_area ? pixel[7:4] :0;
     assign VGA_HS = ~hsync;
     assign VGA_VS = ~vsync;
 endmodule
@@ -191,7 +191,7 @@ module screamyBird (
     gameFSM game(.clk(clk),.start(clk),.hsync(hsync), .hcount(hcount),.vcount(vcount),.vsync(vsync), .character_height(character_height), .at_display_area(at_display_area));
     characterSpriteGenerator cspritegen(.character_height(character_height),.hcount(hcount),.vcount(vcount), .clk(clk),.charapixel(charapixel));
     wallSpriteGenerator wspritegen(.wall_height(character_height),.hcount(hcount),.vcount(vcount),.clk(clk),.wallpixel(wallpixel));
-    assign pixel = charapixel;
+    assign pixel = charapixel | wallpixel;
 endmodule
 
 module gameFSM (
@@ -203,13 +203,15 @@ module gameFSM (
     output at_display_area,
     output [9:0] hcount,
     output [9:0] vcount,
-    output reg [9:0] character_height
+    output reg [9:0] character_height,
+    output reg [9:0] wall_height
     );
     vga vga1(.vga_clock(clk),.hcount(hcount),.vcount(vcount),
       .hsync(hsync),.vsync(vsync),.at_display_area(at_display_area));
     
    always @(start) begin
-    character_height = 256;
+    character_height = 200;
+    wall_height = 150;
    end
     
 endmodule
@@ -222,19 +224,44 @@ module characterSpriteGenerator(
     output [23:0] charapixel
 );
     
-    blob charactersprite(.x(10'd0),.y(10'd0),.hcount(hcount), .vcount(vcount), .pixel(charapixel));
+    blob charactersprite(.x(10'd320),.y(character_height),.hcount(hcount), .vcount(vcount), .pixel(charapixel));
 
 endmodule
 
 module wallSpriteGenerator(
     input [9:0] wall_height,
+//    input [9:0] wall_distance,
     input [9:0] hcount,
     input [9:0] vcount,
     input clk,
     output [23:0] wallpixel
 );
+    parameter [9:0] wallLength = 100;
+    parameter [9:0] wallHeight = 10;
+    parameter [9:0] constantx = 320 - wallLength;
     
-    blob wallsprite(.x(10'd300),.y(10'd300),.hcount(hcount), .vcount(vcount), .pixel(wallpixel));
-
+    parameter [9:0] wallDistance = 100;
+    
+    wire [23:0] wall1pixel, wall2pixel;
+    blob #(.WIDTH(wallLength),.HEIGHT(wallHeight),.COLOR(24'hFF_FF_00)) wallsprite(.x(constantx),.y(10'd300),.hcount(hcount), .vcount(vcount), .pixel(wall1pixel));
+    blob #(.WIDTH(wallLength),.HEIGHT(wallHeight),.COLOR(24'hFF_FF_00)) wall2sprite(.x(constantx),.y(10'd300+wallDistance),.hcount(hcount), .vcount(vcount), .pixel(wall2pixel));
+    assign wallpixel = wall1pixel | wall2pixel;
 endmodule
 
+module CollisionDetection(
+    input [9:0] character_height,
+    input [9:0] wall_position,
+    //input [9:0] wallDistance,
+    //input [?:0] character_speed,
+    //input [?:0] wall_speed
+    output collision);
+    
+    parameter characterSize = 64;
+    parameter wallHeight = 10;
+    
+    parameter [9:0] wallDistance = 100;
+    
+    //actually need to take in speed too rip
+    always @(character_height,wall_position) begin 
+    end
+endmodule
