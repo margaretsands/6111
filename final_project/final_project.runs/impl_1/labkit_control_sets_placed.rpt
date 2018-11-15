@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Wed Nov 14 18:42:47 2018
-| Host         : eecs-digital-17 running 64-bit Ubuntu 14.04.5 LTS
+| Date         : Thu Nov 15 16:39:01 2018
+| Host         : eecs-digital-21 running 64-bit Ubuntu 14.04.5 LTS
 | Command      : report_control_sets -verbose -file labkit_control_sets_placed.rpt
 | Design       : labkit
 | Device       : xc7a100t
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     4 |
-| Unused register locations in slices containing registers |    19 |
+| Number of unique control sets                            |     6 |
+| Unused register locations in slices containing registers |    33 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,9 +33,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              33 |           14 |
+| No           | No                    | No                     |              20 |            8 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              10 |            3 |
+| No           | Yes                   | No                     |              17 |            8 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |              10 |            3 |
@@ -45,13 +45,15 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+----------------------+---------------+------------------+------------------+----------------+
-|     Clock Signal     | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+----------------------+---------------+------------------+------------------+----------------+
-|  CLK100MHZ_IBUF_BUFG |               |                  |                1 |              2 |
-|  clock_25mhz_BUFG    |               | vga1/hreset      |                3 |             10 |
-|  clock_25mhz_BUFG    | vga1/hreset   | vga1/vcount0     |                3 |             10 |
-|  clock_25mhz_BUFG    |               |                  |               13 |             31 |
-+----------------------+---------------+------------------+------------------+----------------+
++----------------------+-------------------------+---------------------------+------------------+----------------+
+|     Clock Signal     |      Enable Signal      |      Set/Reset Signal     | Slice Load Count | Bel Load Count |
++----------------------+-------------------------+---------------------------+------------------+----------------+
+|  CLK100MHZ_IBUF_BUFG |                         |                           |                1 |              2 |
+|  clock_25mhz_BUFG    |                         | display/strobe[4]_i_1_n_0 |                2 |              3 |
+|  clock_25mhz_BUFG    |                         | display/p_0_in[0]         |                2 |              4 |
+|  clock_25mhz_BUFG    |                         | scgame/game/vga1/hreset   |                4 |             10 |
+|  clock_25mhz_BUFG    | scgame/game/vga1/hreset | scgame/game/vga1/vcount0  |                3 |             10 |
+|  clock_25mhz_BUFG    |                         |                           |                7 |             18 |
++----------------------+-------------------------+---------------------------+------------------+----------------+
 
 

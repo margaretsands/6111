@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date             : Wed Nov 14 18:43:01 2018
-| Host             : eecs-digital-17 running 64-bit Ubuntu 14.04.5 LTS
+| Date             : Thu Nov 15 16:39:15 2018
+| Host             : eecs-digital-21 running 64-bit Ubuntu 14.04.5 LTS
 | Command          : report_power -file labkit_power_routed.rpt -pb labkit_power_summary_routed.pb -rpx labkit_power_routed.rpx
 | Design           : labkit
 | Device           : xc7a100tcsg324-3
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.132 |
-| Dynamic (W)              | 0.028 |
+| Total On-Chip Power (W)  | 0.126 |
+| Dynamic (W)              | 0.021 |
 | Device Static (W)        | 0.104 |
 | Effective TJA (C/W)      | 4.6   |
 | Max Ambient (C)          | 99.4  |
@@ -50,16 +50,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      126 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       41 |     63400 |            0.06 |
+| Slice Logic    |    <0.001 |      114 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       38 |     63400 |            0.06 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Register     |    <0.001 |       53 |    126800 |            0.04 |
+|   Register     |    <0.001 |       47 |    126800 |            0.04 |
 |   CARRY4       |    <0.001 |        4 |     15850 |            0.03 |
 |   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |    <0.001 |      105 |       --- |             --- |
-| I/O            |     0.027 |       80 |       210 |           38.10 |
+| Signals        |    <0.001 |      101 |       --- |             --- |
+| I/O            |     0.020 |       80 |       210 |           38.10 |
 | Static Power   |     0.104 |          |           |                 |
-| Total          |     0.132 |          |           |                 |
+| Total          |     0.126 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |
 | Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |
-| Vcco33    |       3.300 |     0.012 |       0.008 |      0.004 |
+| Vcco33    |       3.300 |     0.010 |       0.006 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.004 |       0.000 |      0.004 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -138,10 +138,12 @@ Table of Contents
 +------------+-----------+
 | Name       | Power (W) |
 +------------+-----------+
-| labkit     |     0.028 |
+| labkit     |     0.021 |
 |   clockgen |    <0.001 |
 |   display  |    <0.001 |
-|   vga1     |    <0.001 |
+|   scgame   |    <0.001 |
+|     game   |    <0.001 |
+|       vga1 |    <0.001 |
 +------------+-----------+
 
 

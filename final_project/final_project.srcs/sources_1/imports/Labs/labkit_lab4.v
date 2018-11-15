@@ -54,7 +54,7 @@ module labkit(
 
     assign LED = SW;     
     assign JA[7:0] = 8'b0;
-    assign data = {28'h0123456, SW[3:0]};   // display 0123456 + SW
+    
     assign LED16_R = BTNL;                  // left button -> red led
     assign LED16_G = BTNC;                  // center button -> green led
     assign LED16_B = BTNR;                  // right button -> blue led
@@ -78,11 +78,14 @@ module labkit(
     wire [9:0] vcount;
     wire hsync, vsync, at_display_area;
     wire [23:0] pixel;
-    vga vga1(.vga_clock(clock_25mhz),.hcount(hcount),.vcount(vcount),
-          .hsync(hsync),.vsync(vsync),.at_display_area(at_display_area));
-    screamyBird scgame(.clk(clock_25mhz),.pixel(pixel));
-    assign VGA_R = at_display_area ? pixel[23:19 : 0;
-    assign VGA_G = 0;
+    screamyBird scgame(.clk(clock_25mhz),.pixel(pixel),.at_display_area(at_display_area),.hsync(hsync),.vsync(vsync));
+
+//    vga vga1(.vga_clock(clock_25mhz),.hcount(hcount),.vcount(vcount),
+//      .hsync(hsync),.vsync(vsync),.at_display_area(at_display_area));
+    
+    assign data = {4'd1, pixel};   // display 0123456 + SW
+    assign VGA_R = at_display_area ? pixel[23:20] : 0;
+    assign VGA_G = at_display_area ? 4'b1111 :0;
     assign VGA_B = 0;
     assign VGA_HS = ~hsync;
     assign VGA_VS = ~vsync;
@@ -175,28 +178,39 @@ endmodule
 
 module screamyBird (
     input clk,
-    output [23:0] pixel
+    output [23:0] pixel,
+    output at_display_area,
+    output hsync,
+    output vsync
 );
     wire [9:0] hcount;
     wire [9:0] vcount;
     wire [9:0] character_height;
-    wire hsync, vsync, at_display_area;
-    gameFSM game(.clk(clk),.hsync(hsync), .hcount(hcount),.vcount(vcount),.vsync(vsync), .character_height(character_height));
-    characterSpriteGenerator cspritegen(.character_height(character_height),.hcount(hcount),.vcount(vcount),.charapixel(pixel));
+    wire [23:0] charapixel;
+    wire [23:0] wallpixel;
+    gameFSM game(.clk(clk),.start(clk),.hsync(hsync), .hcount(hcount),.vcount(vcount),.vsync(vsync), .character_height(character_height), .at_display_area(at_display_area));
+    characterSpriteGenerator cspritegen(.character_height(character_height),.hcount(hcount),.vcount(vcount), .clk(clk),.charapixel(charapixel));
+    wallSpriteGenerator wspritegen(.wall_height(character_height),.hcount(hcount),.vcount(vcount),.clk(clk),.wallpixel(wallpixel));
+    assign pixel = charapixel;
 endmodule
 
 module gameFSM (
     //game FSM inputs will go here after being debounced
     input clk,
+    input start,
     output hsync,
     output vsync,
-    output [10:0] hcount,
+    output at_display_area,
+    output [9:0] hcount,
     output [9:0] vcount,
-    output [9:0] character_height
+    output reg [9:0] character_height
     );
-    wire at_display_area;
     vga vga1(.vga_clock(clk),.hcount(hcount),.vcount(vcount),
       .hsync(hsync),.vsync(vsync),.at_display_area(at_display_area));
+    
+   always @(start) begin
+    character_height = 256;
+   end
     
 endmodule
 
@@ -208,7 +222,19 @@ module characterSpriteGenerator(
     output [23:0] charapixel
 );
     
-    blob charactersprite(.x(9'd512),.y(character_height),.hcount(hcount), .vcount(vcount), .pixel(charapixel));
+    blob charactersprite(.x(10'd0),.y(10'd0),.hcount(hcount), .vcount(vcount), .pixel(charapixel));
+
+endmodule
+
+module wallSpriteGenerator(
+    input [9:0] wall_height,
+    input [9:0] hcount,
+    input [9:0] vcount,
+    input clk,
+    output [23:0] wallpixel
+);
+    
+    blob wallsprite(.x(10'd300),.y(10'd300),.hcount(hcount), .vcount(vcount), .pixel(wallpixel));
 
 endmodule
 
