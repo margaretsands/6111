@@ -178,6 +178,10 @@ endmodule
 
 module screamyBird (
     input clk,
+    input start,
+    input increase,
+    input decrease,
+    // input [?:0] param_selector_switches,
     output [23:0] pixel,
     output at_display_area,
     output hsync,
@@ -186,11 +190,19 @@ module screamyBird (
     wire [9:0] hcount;
     wire [9:0] vcount;
     wire [9:0] character_height;
+    wire [1:0] state;
+    gameFSM game(.clk(clk),.start(clk),.state(state),.hsync(hsync), .hcount(hcount),.vcount(vcount),.vsync(vsync), .character_height(character_height), .at_display_area(at_display_area));
+    
+    //might want to move this inside graphics coallator?
     wire [23:0] charapixel;
     wire [23:0] wallpixel;
-    gameFSM game(.clk(clk),.start(clk),.hsync(hsync), .hcount(hcount),.vcount(vcount),.vsync(vsync), .character_height(character_height), .at_display_area(at_display_area));
+    wire [23:0] backpixel;
     characterSpriteGenerator cspritegen(.character_height(character_height),.hcount(hcount),.vcount(vcount), .clk(clk),.charapixel(charapixel));
     wallSpriteGenerator wspritegen(.wall_height(character_height),.hcount(hcount),.vcount(vcount),.clk(clk),.wallpixel(wallpixel));
+    backgroundSpriteGenerator bspritegen(.state(state),.hcount(hcount),.vcount(vcount),.clk(clk),.backpixel(backpixel));
+    
+    graphicsCollator gcollator(.charapixel(charapixel),.wallpixel(wallpixel),.backpixel(backpixel));
+   
     assign pixel = charapixel | wallpixel;
 endmodule
 
@@ -198,6 +210,7 @@ module gameFSM (
     //game FSM inputs will go here after being debounced
     input clk,
     input start,
+    output reg [1:0] state,
     output hsync,
     output vsync,
     output at_display_area,
@@ -212,6 +225,7 @@ module gameFSM (
    always @(start) begin
     character_height = 200;
     wall_height = 150;
+    state = 1;
    end
     
 endmodule
@@ -225,6 +239,19 @@ module characterSpriteGenerator(
 );
     
     blob charactersprite(.x(10'd320),.y(character_height),.hcount(hcount), .vcount(vcount), .pixel(charapixel));
+
+endmodule
+
+
+module backgroundSpriteGenerator(
+    input [1:0] state,
+    input [9:0] hcount,
+    input [9:0] vcount,
+    input clk,
+    output [23:0] backpixel
+);
+    
+    assign backpixel = 24'hFF_FF_FF;
 
 endmodule
 
@@ -249,6 +276,7 @@ module wallSpriteGenerator(
 endmodule
 
 module CollisionDetection(
+    input clk,
     input [9:0] character_height,
     input [9:0] wall_position,
     //input [9:0] wallDistance,
@@ -264,4 +292,23 @@ module CollisionDetection(
     //actually need to take in speed too rip
     always @(character_height,wall_position) begin 
     end
+endmodule
+
+module graphicsCollator(
+    input [23:0] charapixel,
+    input [23:0] wallpixel,
+    input [23:0] backpixel,
+    output reg [23:0] pixel);
+    
+    //ordering is wall then character then background 
+    
+    always @(*) begin
+        if (wallpixel)
+            pixel <= wallpixel;
+        else if (charapixel)
+            pixel <= charapixel;
+        else
+            pixel <= backpixel;
+    end
+
 endmodule
