@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Thu Nov 15 17:16:05 2018
-# Process ID: 13658
+# Start of session at: Mon Nov 19 16:34:28 2018
+# Process ID: 10942
 # Current directory: /afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.runs/synth_1
 # Command line: vivado -log labkit.vds -mode batch -messageDb vivado.pb -notrace -source labkit.tcl
 # Log file: /afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.runs/synth_1/labkit.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13662 
+INFO: Helper process launched with PID 10946 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1057.340 ; gain = 162.137 ; free physical = 3508 ; free virtual = 13868
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1057.340 ; gain = 162.137 ; free physical = 3236 ; free virtual = 13938
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'labkit' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:22]
 INFO: [Synth 8-638] synthesizing module 'clock_quarter_divider' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:94]
@@ -26,19 +26,19 @@ INFO: [Synth 8-638] synthesizing module 'display_8hex' [/afs/athena.mit.edu/user
 	Parameter bits bound to: 13 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'display_8hex' (2#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/joannas/Documents/6.111/Labs/lab4/lab4.srcs/sources_1/imports/Labs/display_8hex.v:16]
 INFO: [Synth 8-638] synthesizing module 'screamyBird' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:179]
-INFO: [Synth 8-638] synthesizing module 'gameFSM' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:197]
+INFO: [Synth 8-638] synthesizing module 'gameFSM' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:209]
 INFO: [Synth 8-638] synthesizing module 'vga' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:115]
 INFO: [Synth 8-256] done synthesizing module 'vga' (3#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:115]
-INFO: [Synth 8-256] done synthesizing module 'gameFSM' (4#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:197]
-WARNING: [Synth 8-350] instance 'game' of module 'gameFSM' requires 9 connections, but only 8 given [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:191]
-INFO: [Synth 8-638] synthesizing module 'characterSpriteGenerator' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:219]
+INFO: [Synth 8-256] done synthesizing module 'gameFSM' (4#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:209]
+WARNING: [Synth 8-350] instance 'game' of module 'gameFSM' requires 10 connections, but only 9 given [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:194]
+INFO: [Synth 8-638] synthesizing module 'characterSpriteGenerator' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:233]
 INFO: [Synth 8-638] synthesizing module 'blob' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:163]
 	Parameter WIDTH bound to: 64 - type: integer 
 	Parameter HEIGHT bound to: 64 - type: integer 
 	Parameter COLOR bound to: 24'b111111111111111111111111 
 INFO: [Synth 8-256] done synthesizing module 'blob' (5#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:163]
-INFO: [Synth 8-256] done synthesizing module 'characterSpriteGenerator' (6#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:219]
-INFO: [Synth 8-638] synthesizing module 'wallSpriteGenerator' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:231]
+INFO: [Synth 8-256] done synthesizing module 'characterSpriteGenerator' (6#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:233]
+INFO: [Synth 8-638] synthesizing module 'wallSpriteGenerator' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:258]
 	Parameter wallLength bound to: 10'b0001100100 
 	Parameter wallHeight bound to: 10'b0000001010 
 	Parameter constantx bound to: 10'b0011011100 
@@ -53,9 +53,16 @@ INFO: [Synth 8-638] synthesizing module 'blob__parameterized1' [/afs/athena.mit.
 	Parameter HEIGHT bound to: 10'b0000001010 
 	Parameter COLOR bound to: 24'b111111111111111100000000 
 INFO: [Synth 8-256] done synthesizing module 'blob__parameterized1' (6#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:163]
-INFO: [Synth 8-256] done synthesizing module 'wallSpriteGenerator' (7#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:231]
-INFO: [Synth 8-256] done synthesizing module 'screamyBird' (8#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:179]
-INFO: [Synth 8-256] done synthesizing module 'labkit' (9#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:22]
+INFO: [Synth 8-256] done synthesizing module 'wallSpriteGenerator' (7#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:258]
+INFO: [Synth 8-638] synthesizing module 'backgroundSpriteGenerator' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:246]
+INFO: [Synth 8-256] done synthesizing module 'backgroundSpriteGenerator' (8#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:246]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:204]
+INFO: [Synth 8-638] synthesizing module 'graphicsCollator' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:306]
+INFO: [Synth 8-256] done synthesizing module 'graphicsCollator' (9#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:306]
+WARNING: [Synth 8-350] instance 'gcollator' of module 'graphicsCollator' requires 4 connections, but only 3 given [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:204]
+INFO: [Synth 8-256] done synthesizing module 'screamyBird' (10#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:179]
+WARNING: [Synth 8-350] instance 'scgame' of module 'screamyBird' requires 8 connections, but only 5 given [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:81]
+INFO: [Synth 8-256] done synthesizing module 'labkit' (11#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:22]
 WARNING: [Synth 8-3917] design labkit has port JA[7] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port JA[6] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port JA[5] driven by constant 0
@@ -65,6 +72,29 @@ WARNING: [Synth 8-3917] design labkit has port JA[2] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port JA[1] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port JA[0] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port state[1]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port state[0]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[9]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[8]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[7]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[6]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[5]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[4]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[3]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[2]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[1]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[0]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port vcount[9]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port vcount[8]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port vcount[7]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port vcount[6]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port vcount[5]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port vcount[4]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port vcount[3]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port vcount[2]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port vcount[1]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port vcount[0]
+WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port clk
 WARNING: [Synth 8-3331] design wallSpriteGenerator has unconnected port wall_height[9]
 WARNING: [Synth 8-3331] design wallSpriteGenerator has unconnected port wall_height[8]
 WARNING: [Synth 8-3331] design wallSpriteGenerator has unconnected port wall_height[7]
@@ -78,10 +108,13 @@ WARNING: [Synth 8-3331] design wallSpriteGenerator has unconnected port wall_hei
 WARNING: [Synth 8-3331] design wallSpriteGenerator has unconnected port clk
 WARNING: [Synth 8-3331] design characterSpriteGenerator has unconnected port clk
 WARNING: [Synth 8-3331] design gameFSM has unconnected port start
+WARNING: [Synth 8-3331] design screamyBird has unconnected port start
+WARNING: [Synth 8-3331] design screamyBird has unconnected port increase
+WARNING: [Synth 8-3331] design screamyBird has unconnected port decrease
 WARNING: [Synth 8-3331] design labkit has unconnected port BTNU
 WARNING: [Synth 8-3331] design labkit has unconnected port BTND
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.785 ; gain = 202.582 ; free physical = 3466 ; free virtual = 13826
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.785 ; gain = 202.582 ; free physical = 3190 ; free virtual = 13894
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -91,7 +124,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.785 ; gain = 202.582 ; free physical = 3466 ; free virtual = 13826
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1097.785 ; gain = 202.582 ; free physical = 3190 ; free virtual = 13894
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -107,22 +140,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1463.262 ; gain = 0.000 ; free physical = 3203 ; free virtual = 13563
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1463.262 ; gain = 0.000 ; free physical = 2956 ; free virtual = 13702
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3202 ; free virtual = 13563
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2955 ; free virtual = 13702
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3202 ; free virtual = 13563
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2955 ; free virtual = 13702
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3202 ; free virtual = 13563
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2955 ; free virtual = 13702
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:172]
 INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:173]
@@ -137,7 +170,7 @@ INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to lo
 INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:172]
 INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:173]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3214 ; free virtual = 13574
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2944 ; free virtual = 13690
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -160,6 +193,7 @@ Detailed RTL Component Info :
 	                7 Bit    Registers := 1     
 	                1 Bit    Registers := 4     
 +---Muxes : 
+	   2 Input     24 Bit        Muxes := 2     
 	   8 Input      8 Bit        Muxes := 1     
 	  16 Input      7 Bit        Muxes := 8     
 	   2 Input      4 Bit        Muxes := 3     
@@ -209,6 +243,10 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input     11 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 2     
+Module graphicsCollator 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -221,7 +259,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3214 ; free virtual = 13574
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2943 ; free virtual = 13690
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -237,9 +275,9 @@ WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 1
 WARNING: [Synth 8-3331] design labkit has unconnected port BTNU
 WARNING: [Synth 8-3331] design labkit has unconnected port BTND
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3214 ; free virtual = 13574
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2943 ; free virtual = 13690
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3214 ; free virtual = 13574
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2943 ; free virtual = 13690
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -256,9 +294,9 @@ WARNING: [Synth 8-3332] Sequential element (display/seg_reg[4]) is unused and wi
 WARNING: [Synth 8-3332] Sequential element (display/seg_reg[1]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (display/seg_reg[0]) is unused and will be removed from module labkit.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3206 ; free virtual = 13567
+Finished Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2927 ; free virtual = 13676
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3206 ; free virtual = 13567
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2927 ; free virtual = 13676
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -272,10 +310,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3190 ; free virtual = 13551
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2893 ; free virtual = 13649
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3190 ; free virtual = 13551
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2893 ; free virtual = 13649
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -287,16 +325,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3190 ; free virtual = 13551
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2874 ; free virtual = 13630
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3190 ; free virtual = 13551
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2874 ; free virtual = 13630
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3190 ; free virtual = 13551
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2874 ; free virtual = 13630
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -313,7 +351,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3190 ; free virtual = 13551
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2874 ; free virtual = 13630
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -326,7 +364,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3190 ; free virtual = 13551
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2874 ; free virtual = 13630
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -338,25 +376,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3190 ; free virtual = 13551
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2874 ; free virtual = 13630
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3190 ; free virtual = 13551
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2874 ; free virtual = 13630
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3190 ; free virtual = 13551
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2874 ; free virtual = 13630
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3190 ; free virtual = 13551
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2874 ; free virtual = 13630
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -397,11 +435,11 @@ Report Instance Areas:
 |6     |      vga1 |vga                   |    78|
 +------+-----------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3190 ; free virtual = 13551
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2874 ; free virtual = 13630
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1463.262 ; gain = 113.441 ; free physical = 3190 ; free virtual = 13551
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 3191 ; free virtual = 13551
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1463.262 ; gain = 113.441 ; free physical = 2874 ; free virtual = 13630
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1463.262 ; gain = 568.059 ; free physical = 2874 ; free virtual = 13630
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -411,8 +449,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-49 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
+53 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1463.262 ; gain = 491.500 ; free physical = 3192 ; free virtual = 13552
-report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1495.281 ; gain = 0.000 ; free physical = 3190 ; free virtual = 13551
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 15 17:16:27 2018...
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1463.262 ; gain = 491.500 ; free physical = 2868 ; free virtual = 13627
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1495.281 ; gain = 0.000 ; free physical = 2866 ; free virtual = 13625
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 19 16:34:51 2018...
