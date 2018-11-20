@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date             : Mon Nov 19 16:35:26 2018
+| Date             : Tue Nov 20 12:34:52 2018
 | Host             : eecs-digital-15 running 64-bit Ubuntu 14.04.5 LTS
 | Command          : report_power -file labkit_power_routed.rpt -pb labkit_power_summary_routed.pb -rpx labkit_power_routed.rpx
 | Design           : labkit
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.127 |
-| Dynamic (W)              | 0.023 |
-| Device Static (W)        | 0.104 |
+| Total On-Chip Power (W)  | 0.119 |
+| Dynamic (W)              | 0.022 |
+| Device Static (W)        | 0.097 |
 | Effective TJA (C/W)      | 4.6   |
-| Max Ambient (C)          | 99.4  |
-| Junction Temperature (C) | 25.6  |
+| Max Ambient (C)          | 99.5  |
+| Junction Temperature (C) | 25.5  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -50,16 +50,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      132 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       50 |     63400 |            0.08 |
+| Slice Logic    |    <0.001 |      449 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      196 |     63400 |            0.31 |
+|   CARRY4       |    <0.001 |       31 |     15850 |            0.20 |
+|   Register     |    <0.001 |      157 |    126800 |            0.12 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Register     |    <0.001 |       50 |    126800 |            0.04 |
-|   CARRY4       |    <0.001 |        4 |     15850 |            0.03 |
-|   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |    <0.001 |      107 |       --- |             --- |
-| I/O            |     0.022 |       80 |       210 |           38.10 |
-| Static Power   |     0.104 |          |           |                 |
-| Total          |     0.127 |          |           |                 |
+|   F7/F8 Muxes  |    <0.001 |        1 |     63400 |           <0.01 |
+|   Others       |     0.000 |       16 |       --- |             --- |
+| Signals        |    <0.001 |      342 |       --- |             --- |
+| I/O            |     0.020 |       67 |       210 |           31.90 |
+| Static Power   |     0.097 |          |           |                 |
+| Total          |     0.119 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,11 +70,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |
+| Vccint    |       1.000 |     0.017 |       0.002 |      0.015 |
 | Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |
 | Vcco33    |       3.300 |     0.010 |       0.006 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     0.004 |       0.000 |      0.004 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
@@ -135,15 +136,19 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------+-----------+
-| Name       | Power (W) |
-+------------+-----------+
-| labkit     |     0.023 |
-|   clockgen |    <0.001 |
-|   display  |    <0.001 |
-|   scgame   |    <0.001 |
-|     game   |    <0.001 |
-|       vga1 |    <0.001 |
-+------------+-----------+
++-----------------------+-----------+
+| Name                  | Power (W) |
++-----------------------+-----------+
+| labkit                |     0.022 |
+|   clockgen            |    <0.001 |
+|   display             |    <0.001 |
+|   scgame              |     0.001 |
+|     cspritegen        |    <0.001 |
+|       charactersprite |    <0.001 |
+|     game              |    <0.001 |
+|       vga1            |    <0.001 |
+|     params            |    <0.001 |
+|     us                |    <0.001 |
++-----------------------+-----------+
 
 

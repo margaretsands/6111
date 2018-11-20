@@ -2,11 +2,11 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Mon Nov 19 16:34:28 2018
-# Process ID: 10942
-# Current directory: /afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.runs/synth_1
+# Start of session at: Tue Nov 20 12:33:42 2018
+# Process ID: 6569
+# Current directory: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.runs/synth_1
 # Command line: vivado -log labkit.vds -mode batch -messageDb vivado.pb -notrace -source labkit.tcl
-# Log file: /afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.runs/synth_1/labkit.vds
-# Journal file: /afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.runs/synth_1/vivado.jou
+# Log file: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.runs/synth_1/labkit.vds
+# Journal file: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source labkit.tcl -notrace

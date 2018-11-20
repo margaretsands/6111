@@ -51,8 +51,7 @@ module labkit(
 //////////////////////////////////////////////////////////////////////////////////
 //
 //  remove these lines and insert your lab here
-
-    assign LED = SW;     
+  
     assign JA[7:0] = 8'b0;
     
     assign LED16_R = BTNL;                  // left button -> red led
@@ -78,12 +77,17 @@ module labkit(
     wire [9:0] vcount;
     wire hsync, vsync, at_display_area;
     wire [23:0] pixel;
-    screamyBird scgame(.clk(clock_25mhz),.pixel(pixel),.at_display_area(at_display_area),.hsync(hsync),.vsync(vsync));
+    wire [31:0] character_x;
+    wire [1:0] state;
+    wire [9:0] param_value;
+    wire [3:0] params_seen;
+    screamyBird scgame(.clk(clock_25mhz),.start(BTNC), .increase(BTNU), .decrease(BTND), .left(BTNL), .right(BTNR), .character_x(character_x), .state(state),
+     .pixel(pixel),.at_display_area(at_display_area),.hsync(hsync),.vsync(vsync), .param_select(SW[0]), .param_value(param_value));
 
 //    vga vga1(.vga_clock(clock_25mhz),.hcount(hcount),.vcount(vcount),
 //      .hsync(hsync),.vsync(vsync),.at_display_area(at_display_area));
-    
-    assign data = {4'd1, pixel};   // display 0123456 + SW
+    assign LED = {13'b0, state} ; 
+    assign data = {2'd0, param_value, character_x[19:0]};   // display 0123456 + SW
     assign VGA_R = at_display_area ? pixel[23:20] : 0;
     assign VGA_G = at_display_area ? pixel[16:13] :0;
     assign VGA_B = at_display_area ? pixel[7:4] :0;
@@ -112,48 +116,6 @@ module clock_quarter_divider(input clk100_mhz, output reg clock_25mhz = 0);
     end
 endmodule
 
-module vga(input vga_clock,
-            output reg [9:0] hcount = 0,    // pixel number on current line
-            output reg [9:0] vcount = 0,    // line number
-            output reg vsync, hsync, 
-            output at_display_area);
-
-   // Comments applies to XVGA 1024x768, left in for reference
-   // horizontal: 1344 pixels total
-   // display 1024 pixels per line
-   reg hblank,vblank;
-   wire hsyncon,hsyncoff,hreset,hblankon;
-   assign hblankon = (hcount == 639);    // active H  1023
-   assign hsyncon = (hcount == 655);     // active H + FP 1047
-   assign hsyncoff = (hcount == 751);    // active H + fp + sync  1183
-   assign hreset = (hcount == 799);      // active H + fp + sync + bp 1343
-
-   // vertical: 806 lines total
-   // display 768 lines
-   wire vsyncon,vsyncoff,vreset,vblankon;
-   assign vblankon = hreset & (vcount == 479);    // active V   767
-   assign vsyncon = hreset & (vcount ==490 );     // active V + fp   776
-   assign vsyncoff = hreset & (vcount == 492);    // active V + fp + sync  783
-   assign vreset = hreset & (vcount == 523);      // active V + fp + sync + bp 805
-
-   // sync and blanking
-   wire next_hblank,next_vblank;
-   assign next_hblank = hreset ? 0 : hblankon ? 1 : hblank;
-   assign next_vblank = vreset ? 0 : vblankon ? 1 : vblank;
-   always @(posedge vga_clock) begin
-      hcount <= hreset ? 0 : hcount + 1;
-      hblank <= next_hblank;
-      hsync <= hsyncon ? 0 : hsyncoff ? 1 : hsync;  // active low
-
-      vcount <= hreset ? (vreset ? 0 : vcount + 1) : vcount;
-      vblank <= next_vblank;
-      vsync <= vsyncon ? 0 : vsyncoff ? 1 : vsync;  // active low
-
-   end
-
-   assign at_display_area = ((hcount >= 0) && (hcount < 640) && (vcount >= 0) && (vcount < 480));
-
-endmodule
 
 //////////////////////////////////////////////////////////////////////
 //
@@ -181,18 +143,28 @@ module screamyBird (
     input start,
     input increase,
     input decrease,
+    input left,
+    input right,
+    input param_select,
     // input [?:0] param_selector_switches,
     output [23:0] pixel,
     output at_display_area,
     output hsync,
-    output vsync
+    output vsync,
+    output [31:0] character_x,
+    output [1:0] state,
+    output [9:0] param_value
 );
     wire [9:0] hcount;
     wire [9:0] vcount;
     wire [9:0] character_height;
-    wire [1:0] state;
-    gameFSM game(.clk(clk),.start(clk),.state(state),.hsync(hsync), .hcount(hcount),.vcount(vcount),.vsync(vsync), .character_height(character_height), .at_display_area(at_display_area));
-    
+    wire [1:0] movement;
+    wire update_state;
+    wire [30:0] data_bus;
+    gameFSM game(.clk(clk),.start(start),.collision(increase), .state(state), .movement(movement), .updateState(update_state), .hsync(hsync), .hcount(hcount), .data_bus(data_bus), 
+    .vcount(vcount),.vsync(vsync), .character_height(character_height), .at_display_area(at_display_area), .character_x(character_x));
+
+    updateState us(.clk(clk), .update_state(update_state));
     //might want to move this inside graphics coallator?
     wire [23:0] charapixel;
     wire [23:0] wallpixel;
@@ -201,123 +173,18 @@ module screamyBird (
     wallSpriteGenerator wspritegen(.wall_height(character_height),.hcount(hcount),.vcount(vcount),.clk(clk),.wallpixel(wallpixel));
     backgroundSpriteGenerator bspritegen(.state(state),.hcount(hcount),.vcount(vcount),.clk(clk),.backpixel(backpixel));
     
-    graphicsCollator gcollator(.charapixel(charapixel),.wallpixel(wallpixel),.backpixel(backpixel));
-   
-    assign pixel = charapixel | wallpixel;
-endmodule
-
-module gameFSM (
-    //game FSM inputs will go here after being debounced
-    input clk,
-    input start,
-    output reg [1:0] state,
-    output hsync,
-    output vsync,
-    output at_display_area,
-    output [9:0] hcount,
-    output [9:0] vcount,
-    output reg [9:0] character_height,
-    output reg [9:0] wall_height
-    );
-    vga vga1(.vga_clock(clk),.hcount(hcount),.vcount(vcount),
-      .hsync(hsync),.vsync(vsync),.at_display_area(at_display_area));
+    graphicsCollator gcollator(.charapixel(charapixel),.wallpixel(wallpixel),.backpixel(backpixel), .pixel(pixel));
     
-   always @(start) begin
-    character_height = 200;
-    wall_height = 150;
-    state = 1;
-   end
+    assign movement = left ? 2 : right ? 1: 0;
+    paramController params(.increase(increase), .decrease(decrease), .SW(param_select), .clk(clk), .start(start), .data_bus(data_bus), .value(param_value));
     
 endmodule
 
-module characterSpriteGenerator(
-    input [9:0] character_height,
-    input [9:0] hcount,
-    input [9:0] vcount,
-    input clk,
-    output [23:0] charapixel
-);
-    
-    blob charactersprite(.x(10'd320),.y(character_height),.hcount(hcount), .vcount(vcount), .pixel(charapixel));
-
-endmodule
-
-
-module backgroundSpriteGenerator(
-    input [1:0] state,
-    input [9:0] hcount,
-    input [9:0] vcount,
-    input clk,
-    output [23:0] backpixel
-);
-    
-    assign backpixel = 24'hFF_FF_FF;
-
-endmodule
-
-module wallSpriteGenerator(
-    input [9:0] wall_height,
-//    input [9:0] wall_distance,
-    input [9:0] hcount,
-    input [9:0] vcount,
-    input clk,
-    output [23:0] wallpixel
-);
-    parameter [9:0] wallLength = 100;
-    parameter [9:0] wallHeight = 10;
-    parameter [9:0] constantx = 320 - wallLength;
-    
-    parameter [9:0] wallDistance = 100;
-    
-    wire [23:0] wall1pixel, wall2pixel;
-    blob #(.WIDTH(wallLength),.HEIGHT(wallHeight),.COLOR(24'hFF_FF_00)) wallsprite(.x(constantx),.y(10'd300),.hcount(hcount), .vcount(vcount), .pixel(wall1pixel));
-    blob #(.WIDTH(wallLength),.HEIGHT(wallHeight),.COLOR(24'hFF_FF_00)) wall2sprite(.x(constantx),.y(10'd300+wallDistance),.hcount(hcount), .vcount(vcount), .pixel(wall2pixel));
-    assign wallpixel = wall1pixel | wall2pixel;
-endmodule
-
-module CollisionDetection(
-    input clk,
-    input [9:0] character_height,
-    input [9:0] wall_position,
-    //input [9:0] wallDistance,
-    //input [?:0] character_speed,
-    //input [?:0] xCollision
-    output reg collision);
-    
-    //current height for character is the top of their box
-    parameter characterSize = 64;
-    
-    //wall height is the height it comes down from the top of the screen
-//    parameter wallHeight = 10;
-    
-    //wall distance is the amount of space between the bottom of the top wall and the top of the bottom wall
-    parameter [9:0] wallDistance = 100;
-    
-    //actually need to take in speed too rip
-    always @(*) begin
-        if ((character_height <= wall_position) || ((character_height+characterSize) >= (wall_position + wallDistance))) begin
-            collision <= 1;
-        end
-        else 
-            collision <= 0;
+module updateState(input clk, output update_state);
+    reg [31:0] count;
+    always @(posedge clk) begin
+        if (count == 100000) count <= 0;
+        else count <= count + 1;
     end
-endmodule
-
-module graphicsCollator(
-    input [23:0] charapixel,
-    input [23:0] wallpixel,
-    input [23:0] backpixel,
-    output reg [23:0] pixel);
-    
-    //ordering is wall then character then background 
-    
-    always @(*) begin
-        if (wallpixel)
-            pixel <= wallpixel;
-        else if (charapixel)
-            pixel <= charapixel;
-        else
-            pixel <= backpixel;
-    end
-
+    assign update_state = (count == 100000);
 endmodule
