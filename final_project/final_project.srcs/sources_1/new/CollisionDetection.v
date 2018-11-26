@@ -21,27 +21,34 @@
 module CollisionDetection(
     input clk,
     input [9:0] character_height,
-    input [9:0] wall_position,
-    //input [9:0] wallDistance,
-    //input [?:0] character_speed,
-    //input [?:0] xCollision
+    input [9:0] collidingObstacleY,
+    input [30:0] current_data_bus,
+    input [1:0] movement,
+    input updateState,
+    input xCollision,
     output reg collision);
+    
+    wire [3:0] character_y_speed;
+    wire [3:0] character_x_speed;
+    wire [9:0] wall_distance;
+    reg [9:0] next_height;
+    
+    assign character_y_speed = current_data_bus[7:4];
+    assign character_x_speed = current_data_bus[3:0];
+    assign wall_distance = current_data_bus[17:8];
     
     //current height for character is the top of their box
     parameter characterSize = 64;
     
-    //wall height is the height it comes down from the top of the screen
-//    parameter wallHeight = 10;
-    
-    //wall distance is the amount of space between the bottom of the top wall and the top of the bottom wall
-    parameter [9:0] wallDistance = 100;
-    
-    //actually need to take in speed too rip
     always @(*) begin
-        if ((character_height <= wall_position) || ((character_height+characterSize) >= (wall_position + wallDistance))) begin
-            collision <= 1;
+        if (updateState) begin
+            next_height <= movement==2 ? character_height - character_y_speed : (movement==1 ? character_height + character_y_speed : character_height);
+            //needs a && xCollision term 
+            if (xCollision && (((next_height <= collidingObstacleY) || ((next_height+characterSize) >= (collidingObstacleY + wall_distance))))) begin
+                collision <= 1;
+            end
+            else 
+                collision <= 0;
         end
-        else 
-            collision <= 0;
     end
 endmodule

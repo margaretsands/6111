@@ -20,6 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module graphicsCollator(
+    input clk,
     input [23:0] charapixel,
     input [23:0] wallpixel,
     input [23:0] backpixel,

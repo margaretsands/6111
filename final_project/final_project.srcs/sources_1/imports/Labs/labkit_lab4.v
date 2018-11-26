@@ -81,13 +81,15 @@ module labkit(
     wire [1:0] state;
     wire [9:0] param_value;
     wire [3:0] params_seen;
+    wire [59:0] visibleObstaclesY;
     screamyBird scgame(.clk(clock_25mhz),.start(BTNC), .increase(BTNU), .decrease(BTND), .left(BTNL), .right(BTNR), .character_x(character_x), .state(state),
-     .pixel(pixel),.at_display_area(at_display_area),.hsync(hsync),.vsync(vsync), .param_select(SW[0]), .param_value(param_value));
+     .pixel(pixel),.at_display_area(at_display_area),.hsync(hsync),.vsync(vsync), .param_select(SW[0]), .param_value(param_value), .visibleObstaclesY(visibleObstaclesY));
 
 //    vga vga1(.vga_clock(clock_25mhz),.hcount(hcount),.vcount(vcount),
 //      .hsync(hsync),.vsync(vsync),.at_display_area(at_display_area));
     assign LED = {13'b0, state} ; 
-    assign data = {2'd0, param_value, character_x[19:0]};   // display 0123456 + SW
+//    assign data = {2'd0, param_value, character_x[19:0]};   // display 0123456 + SW
+    assign data = visibleObstaclesY[59:50];
     assign VGA_R = at_display_area ? pixel[23:20] : 0;
     assign VGA_G = at_display_area ? pixel[16:13] :0;
     assign VGA_B = at_display_area ? pixel[7:4] :0;
@@ -125,14 +127,32 @@ endmodule
 module blob
    #(parameter WIDTH = 64,            // default width: 64 pixels
                HEIGHT = 64,           // default height: 64 pixels
-               COLOR = 24'hFF_FF_FF)  // default color: white
+               COLOR = 24'hFF_FF_FF,  // default color: white
+               OFFSET = 0)
    (input [9:0] x,hcount,
     input [9:0] y,vcount,
     output reg [23:0] pixel);
 
    always @ * begin
-      if ((hcount >= x && hcount < (x+WIDTH)) &&
+      if ((hcount >= x && hcount < (x+WIDTH) && hcount > OFFSET) &&
 	 (vcount >= y && vcount < (y+HEIGHT)))
+	pixel = COLOR;
+      else pixel = 0;
+   end
+endmodule
+
+module obstacleBlob
+   #(parameter WIDTH = 64,
+               COLOR = 24'hFF_FF_FF,  // default color: white
+               OFFSET = 0)
+   (input [9:0] x,hcount,
+    input [9:0] y,vcount,
+    input [9:0] height,
+    output reg [23:0] pixel);
+
+   always @ * begin
+      if ((hcount >= x && (x) > 1'd0 && hcount < (x+WIDTH)) &&
+	 (vcount >= y && vcount < (y+height)))
 	pixel = COLOR;
       else pixel = 0;
    end
@@ -153,7 +173,8 @@ module screamyBird (
     output vsync,
     output [31:0] character_x,
     output [1:0] state,
-    output [9:0] param_value
+    output [9:0] param_value,
+    output [59:0] visibleObstaclesY
 );
     wire [9:0] hcount;
     wire [9:0] vcount;
@@ -161,19 +182,30 @@ module screamyBird (
     wire [1:0] movement;
     wire update_state;
     wire [30:0] data_bus;
-    gameFSM game(.clk(clk),.start(start),.collision(increase), .state(state), .movement(movement), .updateState(update_state), .hsync(hsync), .hcount(hcount), .data_bus(data_bus), 
-    .vcount(vcount),.vsync(vsync), .character_height(character_height), .at_display_area(at_display_area), .character_x(character_x));
-
+    wire collision,x_collision;
+    wire [30:0] current_data_bus;
+    wire [9:0] collidingObstacleY;
+    wire [59:0] visibleObstaclesX;
+//    wire [60:0] visibleObstaclesY,visibleObstaclesX;
+    gameFSM game(.clk(clk),.start(start),.collision(1'd0), .state(state), .movement(movement), .updateState(update_state), .hsync(hsync), .hcount(hcount), .data_bus(data_bus), 
+    .current_data_bus(current_data_bus),.vcount(vcount),.vsync(vsync), .character_height(character_height), .at_display_area(at_display_area), .character_x(character_x));
+    
+    
+    CollisionDetection detect(.clk(clk), .collidingObstacleY(collidingObstacleY),.xCollision(x_collision),.updateState(update_state), .character_height(character_height), .movement(movement),.collision(collision),.current_data_bus(current_data_bus));
     updateState us(.clk(clk), .update_state(update_state));
+    obstaclePosition obPosition( .clk(clk), .updateState(update_state), .characterX(character_x), .numberOfObstacles(4'd8), .collidingObstacleY(collidingObstacleY), .visibleObstaclesY(visibleObstaclesY),.visibleObstaclesX(visibleObstaclesX), .xCollision(xCollision));
+    
     //might want to move this inside graphics coallator?
     wire [23:0] charapixel;
     wire [23:0] wallpixel;
     wire [23:0] backpixel;
+    wire [23:0] obpixel;
+    obstacleSpriteGenerator obSprite(.clk(clk),.current_data_bus(current_data_bus),.visibleObstaclesY(visibleObstaclesY),.visibleObstaclesX(visibleObstaclesX),.hcount(hcount),.vcount(vcount),.obpixel(obpixel));
     characterSpriteGenerator cspritegen(.character_height(character_height),.hcount(hcount),.vcount(vcount), .clk(clk),.charapixel(charapixel));
     wallSpriteGenerator wspritegen(.wall_height(character_height),.hcount(hcount),.vcount(vcount),.clk(clk),.wallpixel(wallpixel));
     backgroundSpriteGenerator bspritegen(.state(state),.hcount(hcount),.vcount(vcount),.clk(clk),.backpixel(backpixel));
     
-    graphicsCollator gcollator(.charapixel(charapixel),.wallpixel(wallpixel),.backpixel(backpixel), .pixel(pixel));
+    graphicsCollator gcollator(.clk(clk),.charapixel(charapixel),.wallpixel(obpixel),.backpixel(backpixel), .pixel(pixel));
     
     assign movement = left ? 2 : right ? 1: 0;
     paramController params(.increase(increase), .decrease(decrease), .SW(param_select), .clk(clk), .start(start), .data_bus(data_bus), .value(param_value));

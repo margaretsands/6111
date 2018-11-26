@@ -36,7 +36,8 @@ module gameFSM (
     output [9:0] vcount,
     output [9:0] character_height,
     output [31:0] character_x,
-    output reg [9:0] wall_height
+    output reg [9:0] wall_height,
+    output reg [30:0] current_data_bus
     );
     vga vga1(.vga_clock(clk),.hcount(hcount),.vcount(vcount),
       .hsync(hsync),.vsync(vsync),.at_display_area(at_display_area));
@@ -51,10 +52,10 @@ module gameFSM (
     wire [3:0] character_x_speed;
     wire [9:0] wall_distance = 100;
     reg [9:0] height = 9'd200;
-    reg [31:0] new_x = 0;
-    reg [30:0] current_data_bus;
+    reg [31:0] new_x = 500;
     reg count; 
     reg old_value_transmitting;
+    reg [1:0] x_counter = 0;
     always @(posedge clk) begin
         old_start <= start;
         if (old_start != start && start) begin
@@ -74,7 +75,11 @@ module gameFSM (
         else if (state == STATE_IN_GAME) begin
             if (collision) new_state <= 1;
             if (updateState) begin
-                new_x <= new_x + character_x_speed;
+                if (x_counter==3) begin
+                    new_x <= new_x + character_x_speed;
+                    x_counter <= 0;
+                end
+                else x_counter <= 1+ x_counter;
                 if (movement == 1) height <= height + character_y_speed;
                 if (movement == 2) height <= height - character_y_speed;
             end

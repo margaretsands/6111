@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 module characterSpriteGenerator(
     input [9:0] character_height,
     input [9:0] hcount,
