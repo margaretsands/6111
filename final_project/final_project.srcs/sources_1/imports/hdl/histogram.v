@@ -35,12 +35,12 @@ module histogram(
         
         if (vaddr < 65 && vaddr > 4) begin
             if (vdata > max_val) begin
-                high <= (vaddr < 21) ?  1 : 2 ;
+                high <= (vaddr < 21) ?  0 : 2 ;
                 max_val <= vdata;
             end    
         end
         else begin
-            high <= 0;
+            high <= 1;
             max_val <= 16'b0010000000000000;
         end
     end

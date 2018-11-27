@@ -254,7 +254,7 @@ module labkit(
  
 //////////////////////////////////////////////////////////////////////////////////
 // sample Verilog to generate color bars
-    wire game_hsync, blank;
+    wire game_hsync;
     wire game_vsync;
     wire [23:0] pixel;
     wire [31:0] character_x;
@@ -262,8 +262,9 @@ module labkit(
     wire [9:0] param_value;
     wire [3:0] params_seen;
     wire [30:0] data_bus;
+    wire [59:0] visibleObstaclesY;
     screamyBird scgame(.clk(clock_25mhz),.start(BTNC), .increase(BTNU), .decrease(BTND), .left(BTNL), .right(BTNR), .character_x(character_x), .state(state), .movement(high),
-     .pixel(pixel),.at_display_area(at_display_area),.hsync(game_hsync),.vsync(game_vsync), .param_select(SW[1:0]), .param_value(param_value), .data_bus(data_bus));
+     .pixel(pixel),.at_display_area(at_display_area),.hsync(game_hsync),.vsync(game_vsync), .param_select(SW[0]), .param_value(param_value), .visibleObstaclesY(visibleObstaclesY), .data_bus(data_bus));
 
     assign sensitivity = data_bus[22:18];
     xvga vga1(.vclock(clock_25mhz),.hcount(hcount),.vcount(vcount),
@@ -275,6 +276,7 @@ module labkit(
     assign VGA_B = video_out ? {4{hist_pixel[2]}} : (at_display_area ? pixel[7:4] :0);
     assign VGA_HS = video_out ? ~hsync : ~game_hsync;
     assign VGA_VS = video_out ? ~vsync : ~game_vsync;
+
 endmodule
 
 module clock_quarter_divider(input wire clk100_mhz, output reg clock_25mhz = 0);
@@ -307,14 +309,32 @@ endmodule
 module blob
    #(parameter WIDTH = 64,            // default width: 64 pixels
                HEIGHT = 64,           // default height: 64 pixels
-               COLOR = 24'hFF_FF_FF)  // default color: white
-   (input wire [9:0] x,hcount,
-    input wire [9:0] y,vcount,
+               COLOR = 24'hFF_FF_FF,  // default color: white
+               OFFSET = 0)
+      (input wire [9:0] x,hcount,
+        input wire [9:0] y,vcount,
     output reg [23:0] pixel);
 
    always @ * begin
-      if ((hcount >= x && hcount < (x+WIDTH)) &&
+      if ((hcount >= x && hcount < (x+WIDTH) && hcount > OFFSET) &&
 	 (vcount >= y && vcount < (y+HEIGHT)))
+	pixel = COLOR;
+      else pixel = 0;
+   end
+endmodule
+
+module obstacleBlob
+   #(parameter WIDTH = 64,
+               COLOR = 24'hFF_FF_FF,  // default color: white
+               OFFSET = 0)
+   (input wire [9:0] x,hcount,
+    input wire [9:0] y,vcount,
+    input wire [9:0] height,
+    output reg [23:0] pixel);
+
+   always @ * begin
+      if ((hcount >= x && (x) > 0 && hcount < (x+WIDTH)) &&
+	 (vcount >= y && vcount < (y+height)))
 	pixel = COLOR;
       else pixel = 0;
    end
@@ -336,25 +356,36 @@ module screamyBird (
     output wire [31:0] character_x,
     output wire [1:0] state,
     output wire [9:0] param_value,
-    output wire [30:0] data_bus
+    output wire [30:0] data_bus,
+    output wire [59:0] visibleObstaclesY
 );
     wire [9:0] hcount;
     wire [9:0] vcount;
     wire [9:0] character_height;
     wire update_state;
-    gameFSM game(.clk(clk),.start(start),.collision(increase), .state(state), .movement(movement), .updateState(update_state), .hsync(hsync), .hcount(hcount), .data_bus(data_bus), 
-    .vcount(vcount),.vsync(vsync), .character_height(character_height), .at_display_area(at_display_area), .character_x(character_x));
-
+    wire collision,xCollision;
+    wire [30:0] current_data_bus;
+    wire [9:0] collidingObstacleY;
+    wire [59:0] visibleObstaclesX;
+//    wire [60:0] visibleObstaclesY,visibleObstaclesX;
+    gameFSM game(.clk(clk),.start(start),.collision(1'd0), .state(state), .movement(movement), .updateState(update_state), .hsync(hsync), .hcount(hcount), .data_bus(data_bus), 
+    .current_data_bus(current_data_bus),.vcount(vcount),.vsync(vsync), .character_height(character_height), .at_display_area(at_display_area), .character_x(character_x));
+    
+    CollisionDetection detect(.clk(clk), .collidingObstacleY(collidingObstacleY),.xCollision(xCollision),.updateState(update_state), .character_height(character_height), .movement(movement),.collision(collision),.current_data_bus(current_data_bus));
     updateState us(.clk(clk), .update_state(update_state));
+    obstaclePosition obPosition( .clk(clk), .updateState(update_state), .characterX(character_x), .numberOfObstacles(4'd8), .collidingObstacleY(collidingObstacleY), .visibleObstaclesY(visibleObstaclesY),.visibleObstaclesX(visibleObstaclesX), .xCollision(xCollision));
+    
     //might want to move this inside graphics coallator?
     wire [23:0] charapixel;
     wire [23:0] wallpixel;
     wire [23:0] backpixel;
+    wire [23:0] obpixel;
+    obstacleSpriteGenerator obSprite(.clk(clk),.current_data_bus(current_data_bus),.visibleObstaclesY(visibleObstaclesY),.visibleObstaclesX(visibleObstaclesX),.hcount(hcount),.vcount(vcount),.obpixel(obpixel));
     characterSpriteGenerator cspritegen(.character_height(character_height),.hcount(hcount),.vcount(vcount), .clk(clk),.charapixel(charapixel));
     wallSpriteGenerator wspritegen(.wall_height(character_height),.hcount(hcount),.vcount(vcount),.clk(clk),.wallpixel(wallpixel));
     backgroundSpriteGenerator bspritegen(.state(state),.hcount(hcount),.vcount(vcount),.clk(clk),.backpixel(backpixel));
     
-    graphicsCollator gcollator(.charapixel(charapixel),.wallpixel(wallpixel),.backpixel(backpixel), .pixel(pixel));
+    graphicsCollator gcollator(.clk(clk),.charapixel(charapixel),.wallpixel(obpixel),.backpixel(backpixel), .pixel(pixel));
     
     //assign movement = left ? 2 : right ? 1: 0;
     paramController params(.increase(increase), .decrease(decrease), .SW(param_select), .clk(clk), .start(start), .data_bus(data_bus), .value(param_value));
@@ -370,5 +401,14 @@ module updateState(input wire clk, output wire update_state);
     assign update_state = (count == 100000);
 endmodule
 
-
+module movementDecision(input clk, input wire [1:0] newSignal, output wire direction);
+    reg [19:0] currentarray;
+    reg [5:0] total;
+    always @(posedge clk) begin
+        total <= total + newSignal - currentarray[19:18];
+        currentarray <= {currentarray[17:0], newSignal};
+    end
+    
+    assign direction = total > 25 ? 2 : (total < 15 ? 1 : 0);
+endmodule
 

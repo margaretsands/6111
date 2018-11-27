@@ -23,6 +23,7 @@ module graphicsCollator(
     input wire [23:0] charapixel,
     input wire [23:0] wallpixel,
     input wire [23:0] backpixel,
+    input wire clk,
     output reg [23:0] pixel);
     
     //ordering is wall then character then background 
