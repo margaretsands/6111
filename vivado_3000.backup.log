@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Nov 26 19:53:23 2018
+# Process ID: 3000
+# Current directory: /afs/athena.mit.edu/user/j/o/joannas/6111
+# Command line: vivado
+# Log file: /afs/athena.mit.edu/user/j/o/joannas/6111/vivado.log
+# Journal file: /afs/athena.mit.edu/user/j/o/joannas/6111/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr
+INFO: [Project 1-313] Project file moved from '/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project' since last save.
+Scanning sources...
+Finished scanning sources
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Nov 26 19:57:08 2018...
+ERROR: [Project 1-510] Parsing generated run data failed
+open_project /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr
+INFO: [Project 1-313] Project file moved from '/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project' since last save.
+Scanning sources...
+Finished scanning sources
+ERROR: [Project 1-510] Parsing generated run data failed
+open_project /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr
+INFO: [Project 1-313] Project file moved from '/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project' since last save.
+Scanning sources...
+Finished scanning sources
+ERROR: [Project 1-510] Parsing generated run data failed
+open_project /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr
+INFO: [Project 1-313] Project file moved from '/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project' since last save.
+Scanning sources...
+Finished scanning sources
+ERROR: [Project 1-510] Parsing generated run data failed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 26 19:59:14 2018...

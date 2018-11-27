@@ -1,0 +1,113 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+Process ID: 3835
+
+Current time: 	11/26/18 7:59:55 PM EST
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: NAME="Ubuntu"
+Version: 4.2.0-42-generic
+Architecture: amd64
+Available processors (cores): 8
+
+DISPLAY: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	/var/local/xilinx-local/Vivado/2016.2/tps/lnx64/jre
+
+User name: 	joannas
+User home directory: /afs/athena.mit.edu/user/j/o/joannas
+User working directory: /afs/athena.mit.edu/user/j/o/joannas/6111
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: /var/local/xilinx-local/Vivado
+RDI Data directory: /var/local/xilinx-local/Vivado/2016.2/data
+RDI Bin directory: /var/local/xilinx-local/Vivado/2016.2/bin
+
+Vivado preferences path: /afs/athena.mit.edu/user/j/o/joannas/.Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: /afs/athena.mit.edu/user/j/o/joannas/.Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	165 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,865 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // l:JideButton (JPanel:JComponent, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,865 MB. GUI used memory: 23 MB. Current time: 11/26/18 7:59:55 PM EST
+// [GUI Memory]: 27 MB (+25560kb) [00:00:32]
+// [Engine Memory]: 4,874 MB (+4959787kb) [00:00:32]
+// Elapsed time: 32 seconds
+setFileChooser("/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr");
+// [GUI Memory]: 30 MB (+2262kb) [00:00:35]
+// Opening Vivado Project: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr. Version: Vivado v2016.2 
+// bL:g (cv:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: PROJECT_CLOSE
+// 'i' command handler elapsed time: 32 seconds
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// [GUI Memory]: 36 MB (+3893kb) [00:00:38]
+// Elapsed time: 10 seconds
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // l:JideButton (JPanel:JComponent, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// [GUI Memory]: 40 MB (+2796kb) [00:00:48]
+setFileChooser("/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr");
+// Opening Vivado Project: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr. Version: Vivado v2016.2 
+// bL:g (cv:JFrame):  Open Project : addNotify
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: PROJECT_CLOSE
+// Tcl Message: ERROR: [Project 1-510] Parsing generated run data failed 
+// 'i' command handler elapsed time: 5 seconds
+// [GUI Memory]: 46 MB (+4186kb) [00:00:51]
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 4,938 MB. GUI used memory: 23 MB. Current time: 11/26/18 8:00:15 PM EST
+selectList(PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, "/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr", 0); // q:v (JViewport:JComponent, cv:JFrame)
+// Opening Vivado Project: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr. Version: Vivado v2016.2 
+// bL:g (cv:JFrame):  Open Project : addNotify
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: PROJECT_CLOSE
+// Tcl Message: ERROR: [Project 1-510] Parsing generated run data failed 
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+selectList(PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, "/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr", 0); // q:v (JViewport:JComponent, cv:JFrame)
+// Opening Vivado Project: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr. Version: Vivado v2016.2 
+// bL:g (cv:JFrame):  Open Project : addNotify
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: PROJECT_CLOSE
+// Tcl Message: ERROR: [Project 1-510] Parsing generated run data failed 
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+selectList(PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, "/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr", 0); // q:v (JViewport:JComponent, cv:JFrame)
+// Elapsed time: 113 seconds
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // l:JideButton (JPanel:JComponent, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr");
+// Opening Vivado Project: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr. Version: Vivado v2016.2 
+// bL:g (cv:JFrame):  Open Project : addNotify
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: PROJECT_CLOSE
+// Tcl Message: ERROR: [Project 1-510] Parsing generated run data failed 
+// 'i' command handler elapsed time: 4 seconds
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// [GUI Memory]: 51 MB (+3284kb) [00:02:57]

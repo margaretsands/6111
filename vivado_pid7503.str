@@ -1,0 +1,110 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+Process ID: 7503
+
+Current time: 	11/27/18 2:32:29 PM EST
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: NAME="Ubuntu"
+Version: 4.2.0-42-generic
+Architecture: amd64
+Available processors (cores): 8
+
+DISPLAY: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	/var/local/xilinx-local/Vivado/2016.2/tps/lnx64/jre
+
+User name: 	joannas
+User home directory: /afs/athena.mit.edu/user/j/o/joannas
+User working directory: /afs/athena.mit.edu/user/j/o/joannas/6111
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: /var/local/xilinx-local/Vivado
+RDI Data directory: /var/local/xilinx-local/Vivado/2016.2/data
+RDI Bin directory: /var/local/xilinx-local/Vivado/2016.2/bin
+
+Vivado preferences path: /afs/athena.mit.edu/user/j/o/joannas/.Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: /afs/athena.mit.edu/user/j/o/joannas/.Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	148 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,916 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, "/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr", 0); // q:v (JViewport:JComponent, cv:JFrame)
+// [GUI Memory]: 33 MB (+32362kb) [00:00:03]
+// [Engine Memory]: 4,884 MB (+4969540kb) [00:00:03]
+// bL:g (cv:JFrame):  Open Project : addNotify
+// Opening Vivado Project: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr. Version: Vivado v2016.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// Tcl Message: open_project /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 48 MB (+14143kb) [00:00:06]
+// [GUI Memory]: 61 MB (+10742kb) [00:00:07]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/var/local/xilinx-local/Vivado/2016.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,021 MB. GUI used memory: 30 MB. Current time: 11/27/18 2:32:32 PM EST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: final_project; location: /afs/athena.mit.edu/user/j/o/joannas/6111/final_project; part: xc7a100tcsg324-3
+// Tcl Message: open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 5897.293 ; gain = 136.559 ; free physical = 3259 ; free virtual = 14047 
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: INFO: [filemgmt 20-352] Relaxing define-before-use dependency to only entity and package declarations. 
+// Tcl Message: INFO: [filemgmt 20-352] Relaxing define-before-use dependency to only entity and package declarations. 
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 65 MB (+566kb) [00:10:15]
+// [GUI Memory]: 68 MB (+464kb) [00:10:35]
+// [GUI Memory]: 72 MB (+272kb) [00:10:55]
+// [GUI Memory]: 76 MB (+516kb) [00:13:46]
+// Elapsed time: 828 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labkit (labkit_lab4.v)]", 1); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labkit (labkit_lab4.v), scgame - screamyBird (labkit_lab4.v)]", 15, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labkit (labkit_lab4.v), scgame - screamyBird (labkit_lab4.v), cspritegen - characterSpriteGenerator (characterSpriteGenerator.v)]", 21, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 5,032 MB. GUI used memory: 31 MB. Current time: 11/27/18 2:46:31 PM EST
+selectCodeEditor("labkit_lab4.v", 208, 332); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 129 seconds
+selectCodeEditor("labkit_lab4.v", 27, 345); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 102, 488); // bH:N (JPanel:JComponent, cv:JFrame)
+// [GUI Memory]: 80 MB (+35kb) [00:16:37]
+// Elapsed time: 18 seconds
+selectCodeEditor("labkit_lab4.v", 508, 112); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 508, 112, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+// Elapsed time: 34 seconds
+selectCodeEditor("labkit_lab4.v", 62, 89); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 61, 96); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 79 seconds
+selectCodeEditor("labkit_lab4.v", 260, 82); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 23 seconds
+selectCodeEditor("labkit_lab4.v", 495, 167); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 74 seconds
+selectCodeEditor("labkit_lab4.v", 542, 181); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 479, 358); // bH:N (JPanel:JComponent, cv:JFrame)
+// [GUI Memory]: 84 MB (+306kb) [00:20:30]
+// Elapsed time: 52 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "SW"); // o:ao (az:f, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 513, 247); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("labkit_lab4.v", 507, 246); // bH:N (JPanel:JComponent, cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,032 MB. GUI used memory: 32 MB. Current time: 11/27/18 3:16:31 PM EST

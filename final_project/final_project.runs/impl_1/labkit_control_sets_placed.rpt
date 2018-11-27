@@ -1,0 +1,108 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
+| Date         : Mon Nov 26 21:52:16 2018
+| Host         : eecs-digital-15 running 64-bit Ubuntu 14.04.5 LTS
+| Command      : report_control_sets -verbose -file labkit_control_sets_placed.rpt
+| Design       : labkit
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    55 |
+| Unused register locations in slices containing registers |   164 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             721 |          227 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              61 |           20 |
+| Yes          | No                    | No                     |            5664 |         1247 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             102 |           31 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------+------------------+----------------+
+|       Clock Signal       |                                                                  Enable Signal                                                                  |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
++--------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------+------------------+----------------+
+|  CLK100MHZ_IBUF          |                                                                                                                                                 |                                     |                1 |              2 |
+|  clock_25mhz_BUFG        |                                                                                                                                                 | display/strobe[3]_i_1_n_0           |                2 |              4 |
+|  clock_25mhz_BUFG        |                                                                                                                                                 | display/p_0_in[2]                   |                2 |              4 |
+|  clockgen2/inst/clk_out1 | xadc_demo/eoc_out                                                                                                                               |                                     |                1 |              4 |
+|  clock_25mhz_BUFG        | scgame/params/characterYSpeed                                                                                                                   |                                     |                1 |              4 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/tw_scale_reg_ce_3                                                                                       |                                     |                3 |              5 |
+|  clock_25mhz_BUFG        | scgame/params/value[4]_i_1_n_0                                                                                                                  |                                     |                2 |              5 |
+|  clock_25mhz_BUFG        | scgame/params/value[4]_i_1_n_0                                                                                                                  | scgame/params/value[9]_i_1_n_0      |                2 |              5 |
+|  clock_25mhz_BUFG        | scgame/game/height[9]_i_2_n_0                                                                                                                   | scgame/game/height[9]_i_1_n_0       |                5 |              7 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/tw_scale_reg_ce_2                                                                                       |                                     |                3 |              7 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/tw_scale_reg_ce_1                                                                                       |                                     |                6 |              9 |
+|  clock_25mhz_BUFG        |                                                                                                                                                 | scgame/game/vga1/hreset             |                4 |             10 |
+|  clock_25mhz_BUFG        | scgame/game/vga1/hreset                                                                                                                         | scgame/game/vga1/vcount0            |                4 |             10 |
+|  clock_25mhz_BUFG        | scgame/params/wallDistance                                                                                                                      |                                     |                3 |             10 |
+|  clock_25mhz_BUFG        | vga1/hreset                                                                                                                                     | vga1/vcount0                        |                3 |             10 |
+|  clockgen2/inst/clk_out1 | pwm_out/p_0_in                                                                                                                                  |                                     |                2 |             11 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/tw_scale_reg_ce_0                                                                                       |                                     |                8 |             11 |
+|  clock_25mhz_BUFG        |                                                                                                                                                 | vga1/hreset                         |                3 |             11 |
+|  clockgen2/inst/clk_out1 | osamp16_1/done_osample16                                                                                                                        |                                     |                3 |             12 |
+|  clockgen2/inst/clk_out1 | bram_to_fft_0/addr[0]_i_1_n_0                                                                                                                   |                                     |                3 |             12 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/symbols_out_remaining[11]_i_1_n_0                                                                       |                                     |                3 |             12 |
+|  clockgen2/inst/clk_out1 | bram_to_fft_0/send_count                                                                                                                        | vsync_synchronize/send_count_reg[0] |                3 |             12 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/E[0]                                                                                                    |                                     |                3 |             13 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/tw_scale_reg_ce                                                                                         |                                     |                4 |             13 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/has_scale_sch_buffer.scale_sch_int_reg[11][0]                                                           |                                     |                2 |             13 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/config_channel_fifo/gen_non_real_time.data_in_fifo_pt1/wr_enable                                        |                                     |                2 |             13 |
+|  clockgen2/inst/clk_out1 | osamp16_1/oversample[13]_i_1_n_0                                                                                                                |                                     |                4 |             14 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_addr_gen.tw_addr_gen/cnt/cnt_ce  |                                     |                5 |             14 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_addr_gen.bf2_addr_gen/cnt/cnt_ce |                                     |                5 |             14 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_addr_gen.tw_addr_gen/cnt/cnt_ce  |                                     |                5 |             14 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_addr_gen.bf2_addr_gen/cnt/cnt_ce |                                     |                5 |             14 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/has_addr_gen.tw_addr_gen/cnt/cnt_ce  |                                     |                5 |             14 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[2].natural_order_input.PE/has_addr_gen.bf2_addr_gen/cnt/cnt_ce |                                     |                5 |             14 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[2].natural_order_input.PE/has_addr_gen.tw_addr_gen/cnt/cnt_ce  |                                     |                5 |             14 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_addr_gen.bf2_addr_gen/cnt/cnt_ce |                                     |                5 |             14 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[3].natural_order_input.PE/has_addr_gen.tw_addr_gen/cnt/cnt_ce  |                                     |                5 |             14 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/has_addr_gen.bf2_addr_gen/cnt/cnt_ce |                                     |                5 |             14 |
+|  clock_25mhz_BUFG        | scgame/game/current_data_bus[15]_i_1_n_0                                                                                                        |                                     |                6 |             14 |
+|  clock_25mhz_BUFG        | BTNC_IBUF                                                                                                                                       |                                     |                6 |             14 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/proc0_counter/load_cnt_ce                                        |                                     |                5 |             14 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/DOUT_CNT_CTRL_0/cnt/cnt_ce                                            |                                     |                5 |             14 |
+|  clockgen2/inst/clk_out1 | bram_to_fft_0/frame_tdata[15]_i_1_n_0                                                                                                           |                                     |                9 |             16 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/cordic_0/U0/i_synth/i_synth/gen_sqrt.square_root/gen_rdy_int/CE                                                                       |                                     |                5 |             16 |
+|  clockgen2/inst/clk_out1 | xadc_demo/eoc_out                                                                                                                               | osamp16_1/oversample[13]_i_1_n_0    |                4 |             16 |
+|  clockgen2/inst/clk_out2 | fft_histogram/max_val[15]_i_2_n_0                                                                                                               | vga1/high_reg[0]_1                  |                4 |             17 |
+|  clockgen2/inst/clk_out2 |                                                                                                                                                 |                                     |               10 |             24 |
+|  clock_25mhz_BUFG        | scgame/game/new_x[19]_i_2_n_0                                                                                                                   | scgame/game/new_x[19]_i_1_n_0       |                6 |             25 |
+|  clock_25mhz_BUFG        |                                                                                                                                                 | scgame/us/count[31]_i_1_n_0         |                9 |             32 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/wr_enable                                       |                                     |                5 |             33 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/p_4_out5_out                                    |                                     |                6 |             33 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/p_8_out                                         |                                     |                7 |             33 |
+|  clock_25mhz_BUFG        |                                                                                                                                                 |                                     |               20 |             39 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/data_out_fifo_write                                                                    |                                     |                6 |             44 |
+|  clockgen2/inst/clk_out1 |                                                                                                                                                 |                                     |              220 |            725 |
+|  clockgen2/inst/clk_out1 | fft_mag_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c                                                                                                  |                                     |             1308 |           6449 |
++--------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------+------------------+----------------+
+
+
