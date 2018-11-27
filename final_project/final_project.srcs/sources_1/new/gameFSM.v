@@ -22,20 +22,20 @@
 
 module gameFSM (
     //game FSM inputs will go here after being debounced
-    input clk,
-    input start,
-    input [1:0] movement,
-    input collision,
-    input updateState,
-    input [30:0] data_bus,
-    output [1:0] state,
-    output hsync,
-    output vsync,
-    output at_display_area,
-    output [9:0] hcount,
-    output [9:0] vcount,
-    output [9:0] character_height,
-    output [31:0] character_x,
+    input wire clk,
+    input wire start,
+    input wire [1:0] movement,
+    input wire collision,
+    input wire updateState,
+    input wire [30:0] data_bus,
+    output wire [1:0] state,
+    output wire hsync,
+    output wire vsync,
+    output wire at_display_area,
+    output wire [9:0] hcount,
+    output wire [9:0] vcount,
+    output wire [9:0] character_height,
+    output wire [31:0] character_x,
     output reg [9:0] wall_height
     );
     vga vga1(.vga_clock(clk),.hcount(hcount),.vcount(vcount),
@@ -84,7 +84,6 @@ module gameFSM (
     assign character_height = height;
     assign state = new_state;
     assign character_x = new_x;
-    assign load = (old_start != start && start);
     assign character_y_speed = current_data_bus[7:4];
     assign character_x_speed = current_data_bus[3:0];
     assign wall_distance = current_data_bus[17:8];

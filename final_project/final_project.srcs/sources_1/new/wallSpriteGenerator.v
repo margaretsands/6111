@@ -1,11 +1,11 @@
 
 module wallSpriteGenerator(
-    input [9:0] wall_height,
+    input wire [9:0] wall_height,
 //    input [9:0] wall_distance,
-    input [9:0] hcount,
-    input [9:0] vcount,
-    input clk,
-    output [23:0] wallpixel
+    input wire [9:0] hcount,
+    input wire [9:0] vcount,
+    input wire clk,
+    output wire [23:0] wallpixel
 );
     parameter [9:0] wallLength = 100;
     parameter [9:0] wallHeight = 10;

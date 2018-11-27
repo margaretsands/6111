@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module vga(input vga_clock,
+module vga(input wire vga_clock,
             output reg [9:0] hcount = 0,    // pixel number on current line
             output reg [9:0] vcount = 0,    // line number
             output reg vsync, hsync, 
-            output at_display_area);
+            output wire at_display_area);
 
    // Comments applies to XVGA 1024x768, left in for reference
    // horizontal: 1344 pixels total

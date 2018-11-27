@@ -14,8 +14,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module display_8hex(
-    input clk,                 // system clock
-    input [31:0] data,         // 8 hex numbers, msb first
+    input wire clk,                 // system clock
+    input wire [31:0] data,         // 8 hex numbers, msb first
     output reg [6:0] seg,      // seven segment display output
     output reg [7:0] strobe    // digit strobe
     );

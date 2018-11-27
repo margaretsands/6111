@@ -10,11 +10,52 @@ create_project -in_memory -part xc7a100tcsg324-3
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.cache/wt [current_project]
 set_property parent.project_path /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+add_files -quiet /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp]
+add_files -quiet /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/bram_frame/bram_frame.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/bram_frame/bram_frame.dcp]
+add_files -quiet /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/bram_fft/bram_fft.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/bram_fft/bram_fft.dcp]
+add_files -quiet /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/xadc_demo/xadc_demo.dcp
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/xadc_demo/xadc_demo.dcp]
+read_ip -quiet /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+set_property is_locked true [get_files /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+
+read_ip -quiet /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/bram_frame/bram_frame.xci
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/bram_frame/bram_frame_ooc.xdc]
+set_property is_locked true [get_files /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/bram_frame/bram_frame.xci]
+
+read_ip -quiet /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/bram_fft/bram_fft.xci
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/bram_fft/bram_fft_ooc.xdc]
+set_property is_locked true [get_files /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/bram_fft/bram_fft.xci]
+
+read_ip -quiet /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/xadc_demo/xadc_demo.xci
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/xadc_demo/xadc_demo_ooc.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/xadc_demo/xadc_demo.xdc]
+set_property is_locked true [get_files /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/ip/xadc_demo/xadc_demo.xci]
+
+add_files /afs/athena.mit.edu/user/j/o/joannas/Nexys4FFTDemo/src/bd/fft_mag/fft_mag.bd
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/Nexys4FFTDemo/src/bd/fft_mag/ip/fft_mag_axis_register_slice_2_0/fft_mag_axis_register_slice_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/Nexys4FFTDemo/src/bd/fft_mag/ip/fft_mag_cordic_0_0/fft_mag_cordic_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/Nexys4FFTDemo/src/bd/fft_mag/ip/fft_mag_mult_gen_0_0/fft_mag_mult_gen_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/Nexys4FFTDemo/src/bd/fft_mag/ip/fft_mag_mult_gen_1_0/fft_mag_mult_gen_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/Nexys4FFTDemo/src/bd/fft_mag/ip/fft_mag_xfft_0_0/fft_mag_xfft_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /afs/athena.mit.edu/user/j/o/joannas/Nexys4FFTDemo/src/bd/fft_mag/fft_mag_ooc.xdc]
+set_property is_locked true [get_files /afs/athena.mit.edu/user/j/o/joannas/Nexys4FFTDemo/src/bd/fft_mag/fft_mag.bd]
+
 read_verilog -library xil_defaultlib {
+  /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/hdl/utils.v
+  /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/hdl/oversampler.v
+  /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/hdl/histogram.v
+  /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/hdl/bram_to_fft.v
   /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/vga.v
   /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/gameFSM.v
   /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/paramController.v
@@ -31,6 +72,11 @@ foreach dcp [get_files -quiet -all *.dcp] {
 read_xdc /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc
 set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc]
 
+read_xdc /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc
+set_property used_in_implementation false [get_files /afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/constrs_1/imports/constraints/Nexys4DDR_Master.xdc]
+
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 
 synth_design -top labkit -part xc7a100tcsg324-3
 
