@@ -14,63 +14,116 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6572 
+INFO: Helper process launched with PID 29093 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1057.336 ; gain = 162.137 ; free physical = 2020 ; free virtual = 11235
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1057.332 ; gain = 162.137 ; free physical = 1353 ; free virtual = 10302
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'labkit' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:22]
-INFO: [Synth 8-638] synthesizing module 'clock_quarter_divider' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:98]
-INFO: [Synth 8-256] done synthesizing module 'clock_quarter_divider' (1#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:98]
-INFO: [Synth 8-638] synthesizing module 'display_8hex' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/joannas/Documents/6.111/Labs/lab4/lab4.srcs/sources_1/imports/Labs/display_8hex.v:16]
+INFO: [Synth 8-638] synthesizing module 'labkit' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:22]
+INFO: [Synth 8-638] synthesizing module 'clock_quarter_divider' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:100]
+INFO: [Synth 8-256] done synthesizing module 'clock_quarter_divider' (1#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:100]
+INFO: [Synth 8-638] synthesizing module 'display_8hex' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/joannas/Documents/6.111/Labs/lab4/lab4.srcs/sources_1/imports/Labs/display_8hex.v:16]
 	Parameter bits bound to: 13 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'display_8hex' (2#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/joannas/Documents/6.111/Labs/lab4/lab4.srcs/sources_1/imports/Labs/display_8hex.v:16]
-INFO: [Synth 8-638] synthesizing module 'screamyBird' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:141]
-INFO: [Synth 8-638] synthesizing module 'gameFSM' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/gameFSM.v:23]
+INFO: [Synth 8-256] done synthesizing module 'display_8hex' (2#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/joannas/Documents/6.111/Labs/lab4/lab4.srcs/sources_1/imports/Labs/display_8hex.v:16]
+INFO: [Synth 8-638] synthesizing module 'screamyBird' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:161]
+INFO: [Synth 8-638] synthesizing module 'gameFSM' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/gameFSM.v:23]
 	Parameter NUM_PARAMS bound to: 3 - type: integer 
 	Parameter STATE_IN_GAME bound to: 0 - type: integer 
 	Parameter STATE_GAME_OVER bound to: 1 - type: integer 
 	Parameter STATE_LOAD_PARAMS bound to: 2 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'vga' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/vga.v:23]
-INFO: [Synth 8-256] done synthesizing module 'vga' (3#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/vga.v:23]
-WARNING: [Synth 8-3848] Net wall_height in module/entity gameFSM does not have driver. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/gameFSM.v:39]
-INFO: [Synth 8-256] done synthesizing module 'gameFSM' (4#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/gameFSM.v:23]
-WARNING: [Synth 8-350] instance 'game' of module 'gameFSM' requires 15 connections, but only 14 given [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:164]
-INFO: [Synth 8-638] synthesizing module 'updateState' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:183]
-INFO: [Synth 8-256] done synthesizing module 'updateState' (5#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:183]
-INFO: [Synth 8-638] synthesizing module 'characterSpriteGenerator' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/characterSpriteGenerator.v:2]
-INFO: [Synth 8-638] synthesizing module 'blob' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:125]
+INFO: [Synth 8-638] synthesizing module 'vga' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/vga.v:23]
+INFO: [Synth 8-256] done synthesizing module 'vga' (3#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/vga.v:23]
+WARNING: [Synth 8-3848] Net wall_height in module/entity gameFSM does not have driver. [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/gameFSM.v:39]
+INFO: [Synth 8-256] done synthesizing module 'gameFSM' (4#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/gameFSM.v:23]
+WARNING: [Synth 8-350] instance 'game' of module 'gameFSM' requires 16 connections, but only 15 given [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:190]
+INFO: [Synth 8-638] synthesizing module 'CollisionDetection' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/CollisionDetection.v:21]
+	Parameter characterSize bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'CollisionDetection' (5#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/CollisionDetection.v:21]
+INFO: [Synth 8-638] synthesizing module 'updateState' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:215]
+INFO: [Synth 8-256] done synthesizing module 'updateState' (6#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:215]
+INFO: [Synth 8-638] synthesizing module 'obstaclePosition' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstaclePosition.v:23]
+	Parameter characterWidth bound to: 64 - type: integer 
+	Parameter obstacleWidth bound to: 50 - type: integer 
+	Parameter spaceBetweenObstacles bound to: 78 - type: integer 
+	Parameter indexShift bound to: 7 - type: integer 
+	Parameter maximumVisible bound to: 6 - type: integer 
+	Parameter widthPerObstacle bound to: 128 - type: integer 
+	Parameter characterOffset bound to: 338 - type: integer 
+WARNING: [Synth 8-567] referenced signal 'characterX' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstaclePosition.v:74]
+WARNING: [Synth 8-567] referenced signal 'lowbound' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstaclePosition.v:74]
+WARNING: [Synth 8-567] referenced signal 'closestObstacle' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstaclePosition.v:74]
+WARNING: [Synth 8-567] referenced signal 'thirdclosestObstacle' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstaclePosition.v:74]
+WARNING: [Synth 8-567] referenced signal 'fourthclosestObstacle' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstaclePosition.v:74]
+WARNING: [Synth 8-567] referenced signal 'fifthclosestObstacle' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstaclePosition.v:74]
+WARNING: [Synth 8-567] referenced signal 'sixthclosestObstacle' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstaclePosition.v:74]
+WARNING: [Synth 8-3848] Net numberOfObstacles in module/entity obstaclePosition does not have driver. [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstaclePosition.v:27]
+WARNING: [Synth 8-3848] Net collidingObstacleY in module/entity obstaclePosition does not have driver. [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstaclePosition.v:28]
+INFO: [Synth 8-256] done synthesizing module 'obstaclePosition' (7#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstaclePosition.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'characterX' does not match port width (10) of module 'obstaclePosition' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:196]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:196]
+INFO: [Synth 8-638] synthesizing module 'obstacleSpriteGenerator' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:3]
+	Parameter obstacleWidth bound to: 50 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'obstacleBlob' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:144]
+	Parameter WIDTH bound to: 50 - type: integer 
+	Parameter COLOR bound to: 24'b011000001111111100000000 
+	Parameter OFFSET bound to: 6'b110010 
+INFO: [Synth 8-256] done synthesizing module 'obstacleBlob' (8#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:144]
+WARNING: [Synth 8-689] width (32) of port connection 'height' does not match port width (10) of module 'obstacleBlob' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:24]
+WARNING: [Synth 8-689] width (32) of port connection 'height' does not match port width (10) of module 'obstacleBlob' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:25]
+WARNING: [Synth 8-689] width (32) of port connection 'height' does not match port width (10) of module 'obstacleBlob' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:26]
+WARNING: [Synth 8-689] width (32) of port connection 'height' does not match port width (10) of module 'obstacleBlob' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:27]
+WARNING: [Synth 8-689] width (32) of port connection 'height' does not match port width (10) of module 'obstacleBlob' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:28]
+WARNING: [Synth 8-689] width (32) of port connection 'height' does not match port width (10) of module 'obstacleBlob' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:29]
+WARNING: [Synth 8-567] referenced signal 'wall1pixel' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:32]
+WARNING: [Synth 8-567] referenced signal 'wall2pixel' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:32]
+WARNING: [Synth 8-567] referenced signal 'wall3pixel' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:32]
+WARNING: [Synth 8-567] referenced signal 'wall4pixel' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:32]
+WARNING: [Synth 8-567] referenced signal 'wall5pixel' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:32]
+WARNING: [Synth 8-567] referenced signal 'wall6pixel' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:32]
+WARNING: [Synth 8-567] referenced signal 'wall7pixel' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:32]
+WARNING: [Synth 8-567] referenced signal 'wall8pixel' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:32]
+WARNING: [Synth 8-567] referenced signal 'wall9pixel' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:32]
+WARNING: [Synth 8-567] referenced signal 'wall10pixel' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:32]
+WARNING: [Synth 8-567] referenced signal 'wall11pixel' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:32]
+WARNING: [Synth 8-567] referenced signal 'wall12pixel' should be on the sensitivity list [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:32]
+INFO: [Synth 8-256] done synthesizing module 'obstacleSpriteGenerator' (9#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/obstacleSpriteGenerator.v:3]
+INFO: [Synth 8-638] synthesizing module 'characterSpriteGenerator' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/characterSpriteGenerator.v:2]
+INFO: [Synth 8-638] synthesizing module 'blob' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:127]
 	Parameter WIDTH bound to: 64 - type: integer 
 	Parameter HEIGHT bound to: 64 - type: integer 
 	Parameter COLOR bound to: 24'b111111111111111111111111 
-INFO: [Synth 8-256] done synthesizing module 'blob' (6#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:125]
-INFO: [Synth 8-256] done synthesizing module 'characterSpriteGenerator' (7#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/characterSpriteGenerator.v:2]
-INFO: [Synth 8-638] synthesizing module 'wallSpriteGenerator' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/wallSpriteGenerator.v:2]
+	Parameter OFFSET bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'blob' (10#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:127]
+INFO: [Synth 8-256] done synthesizing module 'characterSpriteGenerator' (11#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/characterSpriteGenerator.v:2]
+INFO: [Synth 8-638] synthesizing module 'wallSpriteGenerator' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/wallSpriteGenerator.v:2]
 	Parameter wallLength bound to: 10'b0001100100 
 	Parameter wallHeight bound to: 10'b0000001010 
 	Parameter constantx bound to: 10'b0011011100 
 	Parameter wallDistance bound to: 10'b0001100100 
-INFO: [Synth 8-638] synthesizing module 'blob__parameterized0' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:125]
+INFO: [Synth 8-638] synthesizing module 'blob__parameterized0' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:127]
 	Parameter WIDTH bound to: 10'b0001100100 
 	Parameter HEIGHT bound to: 10'b0000001010 
-	Parameter COLOR bound to: 24'b111111111111111100000000 
-INFO: [Synth 8-256] done synthesizing module 'blob__parameterized0' (7#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:125]
-INFO: [Synth 8-638] synthesizing module 'blob__parameterized1' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:125]
+	Parameter COLOR bound to: 24'b011000001111111100000000 
+	Parameter OFFSET bound to: 6'b110010 
+INFO: [Synth 8-256] done synthesizing module 'blob__parameterized0' (11#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:127]
+INFO: [Synth 8-638] synthesizing module 'blob__parameterized1' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:127]
 	Parameter WIDTH bound to: 10'b0001100100 
 	Parameter HEIGHT bound to: 10'b0000001010 
-	Parameter COLOR bound to: 24'b111111111111111100000000 
-INFO: [Synth 8-256] done synthesizing module 'blob__parameterized1' (7#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:125]
-INFO: [Synth 8-256] done synthesizing module 'wallSpriteGenerator' (8#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/wallSpriteGenerator.v:2]
-INFO: [Synth 8-638] synthesizing module 'backgroundSpriteGenerator' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/backgroundSpriteGenerator.v:1]
-INFO: [Synth 8-256] done synthesizing module 'backgroundSpriteGenerator' (9#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/backgroundSpriteGenerator.v:1]
-INFO: [Synth 8-638] synthesizing module 'graphicsCollator' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/graphicsCollator.v:22]
-INFO: [Synth 8-256] done synthesizing module 'graphicsCollator' (10#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/graphicsCollator.v:22]
-INFO: [Synth 8-638] synthesizing module 'paramController' [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/paramController.v:23]
-WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000010 is unreachable [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/paramController.v:56]
-WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000010 is unreachable [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/paramController.v:62]
-INFO: [Synth 8-226] default block is never used [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/paramController.v:59]
-INFO: [Synth 8-256] done synthesizing module 'paramController' (11#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/paramController.v:23]
-INFO: [Synth 8-256] done synthesizing module 'screamyBird' (12#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:141]
-INFO: [Synth 8-256] done synthesizing module 'labkit' (13#1) [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:22]
+	Parameter COLOR bound to: 24'b011000001111111100000000 
+	Parameter OFFSET bound to: 6'b110010 
+INFO: [Synth 8-256] done synthesizing module 'blob__parameterized1' (11#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:127]
+INFO: [Synth 8-256] done synthesizing module 'wallSpriteGenerator' (12#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/wallSpriteGenerator.v:2]
+INFO: [Synth 8-638] synthesizing module 'backgroundSpriteGenerator' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/backgroundSpriteGenerator.v:1]
+INFO: [Synth 8-256] done synthesizing module 'backgroundSpriteGenerator' (13#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/backgroundSpriteGenerator.v:1]
+INFO: [Synth 8-638] synthesizing module 'graphicsCollator' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/graphicsCollator.v:22]
+INFO: [Synth 8-256] done synthesizing module 'graphicsCollator' (14#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/graphicsCollator.v:22]
+INFO: [Synth 8-638] synthesizing module 'paramController' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/paramController.v:23]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000010 is unreachable [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/paramController.v:56]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000010 is unreachable [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/paramController.v:62]
+INFO: [Synth 8-226] default block is never used [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/paramController.v:59]
+INFO: [Synth 8-256] done synthesizing module 'paramController' (15#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/paramController.v:23]
+WARNING: [Synth 8-3848] Net x_collision in module/entity screamyBird does not have driver. [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:185]
+INFO: [Synth 8-256] done synthesizing module 'screamyBird' (16#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:161]
+INFO: [Synth 8-256] done synthesizing module 'labkit' (17#1) [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:22]
 WARNING: [Synth 8-3917] design labkit has port JA[7] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port JA[6] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port JA[5] driven by constant 0
@@ -94,6 +147,7 @@ WARNING: [Synth 8-3917] design labkit has port LED[4] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port LED[3] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port LED[2] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 1
+WARNING: [Synth 8-3331] design graphicsCollator has unconnected port clk
 WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[9]
 WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[8]
 WARNING: [Synth 8-3331] design backgroundSpriteGenerator has unconnected port hcount[7]
@@ -127,6 +181,62 @@ WARNING: [Synth 8-3331] design wallSpriteGenerator has unconnected port wall_hei
 WARNING: [Synth 8-3331] design wallSpriteGenerator has unconnected port wall_height[0]
 WARNING: [Synth 8-3331] design wallSpriteGenerator has unconnected port clk
 WARNING: [Synth 8-3331] design characterSpriteGenerator has unconnected port clk
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[30]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[29]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[28]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[27]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[26]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[25]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[24]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[23]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[22]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[21]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[20]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[19]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[18]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[17]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[16]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[5]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[4]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[3]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[2]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[1]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port current_data_bus[0]
+WARNING: [Synth 8-3331] design obstacleSpriteGenerator has unconnected port clk
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port numberOfObstacles[3]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port numberOfObstacles[2]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port numberOfObstacles[1]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port numberOfObstacles[0]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port collidingObstacleY[9]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port collidingObstacleY[8]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port collidingObstacleY[7]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port collidingObstacleY[6]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port collidingObstacleY[5]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port collidingObstacleY[4]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port collidingObstacleY[3]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port collidingObstacleY[2]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port collidingObstacleY[1]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port collidingObstacleY[0]
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port clk
+WARNING: [Synth 8-3331] design obstaclePosition has unconnected port updateState
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port clk
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[30]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[29]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[28]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[27]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[26]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[25]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[24]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[23]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[22]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[21]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[20]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[19]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[18]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[3]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[2]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[1]
+WARNING: [Synth 8-3331] design CollisionDetection has unconnected port current_data_bus[0]
 WARNING: [Synth 8-3331] design gameFSM has unconnected port wall_height[9]
 WARNING: [Synth 8-3331] design gameFSM has unconnected port wall_height[8]
 WARNING: [Synth 8-3331] design gameFSM has unconnected port wall_height[7]
@@ -137,23 +247,9 @@ WARNING: [Synth 8-3331] design gameFSM has unconnected port wall_height[3]
 WARNING: [Synth 8-3331] design gameFSM has unconnected port wall_height[2]
 WARNING: [Synth 8-3331] design gameFSM has unconnected port wall_height[1]
 WARNING: [Synth 8-3331] design gameFSM has unconnected port wall_height[0]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[15]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[14]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[13]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[12]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[11]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[10]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[9]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[8]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[7]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[6]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[5]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[4]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[3]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[2]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[1]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.781 ; gain = 202.582 ; free physical = 1978 ; free virtual = 11193
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1097.777 ; gain = 202.582 ; free physical = 1310 ; free virtual = 10260
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -162,58 +258,69 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin detect:xCollision to constant 0 [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:194]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.781 ; gain = 202.582 ; free physical = 1978 ; free virtual = 11193
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1097.777 ; gain = 202.582 ; free physical = 1310 ; free virtual = 10260
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc]
-Finished Parsing XDC File [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/labkit_propImpl.xdc].
+Parsing XDC File [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc]
+Finished Parsing XDC File [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/constrs_1/imports/Labs/Nexys4DDR_Master_lab4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/labkit_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/labkit_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1464.469 ; gain = 0.000 ; free physical = 1714 ; free virtual = 10929
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1467.246 ; gain = 0.000 ; free physical = 1131 ; free virtual = 10081
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1713 ; free virtual = 10928
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1130 ; free virtual = 10080
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1713 ; free virtual = 10928
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1130 ; free virtual = 10080
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1713 ; free virtual = 10928
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1130 ; free virtual = 10080
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3936] Found unconnected internal register 'current_data_bus_reg' and it is trimmed from '31' to '8' bits. [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/new/gameFSM.v:69]
 INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:134]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:135]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:134]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:135]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:134]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:135]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:134]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:135]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:134]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:135]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:134]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/j/o/joannas/6111/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:135]
+INFO: [Synth 8-5544] ROM "obstacleArray" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "obstacleArray" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "obstacleArray" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "obstacleArray" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "obstacleArray" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "obstacleArray" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:155]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:155]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:155]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:137]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:138]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:137]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:138]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:137]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:138]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:137]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:138]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:137]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:138]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:137]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/imports/Labs/labkit_lab4.v:138]
 INFO: [Synth 8-5544] ROM "backpixel" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'collision_reg' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/CollisionDetection.v:48]
+WARNING: [Synth 8-327] inferring latch for variable 'next_height_reg' [/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.srcs/sources_1/new/CollisionDetection.v:45]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1711 ; free virtual = 10926
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1115 ; free virtual = 10065
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -226,37 +333,42 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
-	   3 Input     12 Bit       Adders := 2     
-	   3 Input     11 Bit       Adders := 4     
-	   2 Input     10 Bit       Adders := 8     
-	   3 Input     10 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 4     
+	   3 Input     32 Bit       Adders := 6     
+	   3 Input     12 Bit       Adders := 14    
+	   2 Input     11 Bit       Adders := 2     
+	   3 Input     11 Bit       Adders := 16    
+	   2 Input     10 Bit       Adders := 32    
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 6     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
 	   2 Input      1 Bit       Adders := 2     
 +---Registers : 
 	               32 Bit    Registers := 2     
-	               31 Bit    Registers := 1     
+	               31 Bit    Registers := 2     
 	               10 Bit    Registers := 5     
-	                8 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 8     
 +---Muxes : 
 	   3 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 5     
 	   2 Input     24 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 1     
 	   3 Input     10 Bit        Muxes := 3     
-	   2 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 4     
+	   9 Input     10 Bit        Muxes := 6     
 	   8 Input      8 Bit        Muxes := 1     
 	  16 Input      7 Bit        Muxes := 8     
-	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 2     
 	   5 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 11    
-	   3 Input      1 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 12    
+	   3 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -295,21 +407,32 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 1     
 	   3 Input     10 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
 	   2 Input      1 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
+	               31 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   3 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
 	   3 Input     10 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 1     
 	   5 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   3 Input      1 Bit        Muxes := 4     
+Module CollisionDetection 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
 Module updateState 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -318,6 +441,28 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
+Module obstaclePosition 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 5     
+	   2 Input      4 Bit       Adders := 5     
+	   2 Input      3 Bit       Adders := 2     
++---Muxes : 
+	   9 Input     10 Bit        Muxes := 6     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module obstacleBlob 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+Module obstacleSpriteGenerator 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 6     
+	   2 Input     10 Bit       Adders := 6     
 Module blob 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -372,7 +517,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1711 ; free virtual = 10926
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1115 ; free virtual = 10065
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -401,25 +546,10 @@ WARNING: [Synth 8-3917] design labkit has port LED[4] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port LED[3] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port LED[2] driven by constant 0
 WARNING: [Synth 8-3917] design labkit has port SEG[7] driven by constant 1
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[15]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[14]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[13]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[12]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[11]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[10]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[9]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[8]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[7]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[6]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[5]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[4]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[3]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[2]
-WARNING: [Synth 8-3331] design labkit has unconnected port SW[1]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1711 ; free virtual = 10926
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1115 ; free virtual = 10065
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1711 ; free virtual = 10926
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1115 ; free virtual = 10065
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -433,6 +563,17 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (\scgame/p
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\scgame/params/data_bus_reg[1] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\scgame/game/current_data_bus_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\scgame/game/current_data_bus_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (scgame/detect/collision_reg) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/detect/next_height_reg[9]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/detect/next_height_reg[8]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/detect/next_height_reg[7]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/detect/next_height_reg[6]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/detect/next_height_reg[5]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/detect/next_height_reg[4]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/detect/next_height_reg[3]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/detect/next_height_reg[2]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/detect/next_height_reg[1]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/detect/next_height_reg[0]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[30]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[29]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[28]) is unused and will be removed from module labkit.
@@ -448,16 +589,23 @@ WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[19]) is u
 WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[18]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[17]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[16]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[15]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[14]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[13]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[12]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[11]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[10]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[9]) is unused and will be removed from module labkit.
-WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[8]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[1]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (scgame/params/data_bus_reg[0]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[30]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[29]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[28]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[27]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[26]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[25]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[24]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[23]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[22]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[21]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[20]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[19]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[18]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[17]) is unused and will be removed from module labkit.
+WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[16]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[1]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (scgame/game/current_data_bus_reg[0]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (scgame/game/new_x_reg[31]) is unused and will be removed from module labkit.
@@ -473,9 +621,9 @@ WARNING: [Synth 8-3332] Sequential element (scgame/game/new_x_reg[22]) is unused
 WARNING: [Synth 8-3332] Sequential element (scgame/game/new_x_reg[21]) is unused and will be removed from module labkit.
 WARNING: [Synth 8-3332] Sequential element (scgame/game/new_x_reg[20]) is unused and will be removed from module labkit.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1711 ; free virtual = 10926
+Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1078 ; free virtual = 10028
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1711 ; free virtual = 10926
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1078 ; free virtual = 10028
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -489,10 +637,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1046 ; free virtual = 9996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1045 ; free virtual = 9995
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -504,16 +652,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1021 ; free virtual = 9970
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1021 ; free virtual = 9970
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1021 ; free virtual = 9970
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -530,7 +678,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1020 ; free virtual = 9969
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -543,7 +691,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1020 ; free virtual = 9969
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -555,25 +703,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1020 ; free virtual = 9969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1020 ; free virtual = 9969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1020 ; free virtual = 9969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1020 ; free virtual = 9970
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -590,43 +738,56 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |    31|
-|3     |LUT1   |    85|
-|4     |LUT2   |    51|
-|5     |LUT3   |    18|
-|6     |LUT4   |    60|
-|7     |LUT5   |    26|
-|8     |LUT6   |    71|
-|9     |MUXF7  |     1|
-|10    |FDRE   |   150|
-|11    |FDSE   |     7|
-|12    |IBUF   |     7|
-|13    |OBUF   |    60|
+|2     |CARRY4 |   210|
+|3     |LUT1   |   109|
+|4     |LUT2   |   328|
+|5     |LUT3   |    76|
+|6     |LUT4   |   422|
+|7     |LUT5   |   153|
+|8     |LUT6   |   148|
+|9     |FDRE   |   171|
+|10    |FDSE   |     8|
+|11    |IBUF   |     7|
+|12    |OBUF   |    60|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+----------------------+-------------------------+------+
 |      |Instance              |Module                   |Cells |
 +------+----------------------+-------------------------+------+
-|1     |top                   |                         |   569|
+|1     |top                   |                         |  1694|
 |2     |  clockgen            |clock_quarter_divider    |     4|
 |3     |  display             |display_8hex             |    55|
-|4     |  scgame              |screamyBird              |   441|
+|4     |  scgame              |screamyBird              |  1566|
 |5     |    cspritegen        |characterSpriteGenerator |     5|
 |6     |      charactersprite |blob                     |     5|
-|7     |    game              |gameFSM                  |   256|
-|8     |      vga1            |vga                      |    99|
-|9     |    params            |paramController          |    83|
-|10    |    us                |updateState              |    97|
+|7     |    game              |gameFSM                  |  1192|
+|8     |      vga1            |vga                      |   706|
+|9     |    obPosition        |obstaclePosition         |     8|
+|10    |    obSprite          |obstacleSpriteGenerator  |   182|
+|11    |      wall10sprite    |obstacleBlob             |    21|
+|12    |      wall11sprite    |obstacleBlob_0           |    21|
+|13    |      wall1sprite     |obstacleBlob_1           |     7|
+|14    |      wall2sprite     |obstacleBlob_2           |     6|
+|15    |      wall3sprite     |obstacleBlob_3           |     6|
+|16    |      wall4sprite     |obstacleBlob_4           |     6|
+|17    |      wall5sprite     |obstacleBlob_5           |     7|
+|18    |      wall6sprite     |obstacleBlob_6           |    21|
+|19    |      wall7sprite     |obstacleBlob_7           |    21|
+|20    |      wall8sprite     |obstacleBlob_8           |    21|
+|21    |      wall9sprite     |obstacleBlob_9           |    21|
+|22    |      wallsprite      |obstacleBlob_10          |     6|
+|23    |    params            |paramController          |    89|
+|24    |    us                |updateState              |    90|
 +------+----------------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1020 ; free virtual = 9970
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 78 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1464.469 ; gain = 113.441 ; free physical = 1703 ; free virtual = 10918
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.469 ; gain = 569.270 ; free physical = 1703 ; free virtual = 10918
+Synthesis finished with 0 errors, 0 critical warnings and 119 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1467.246 ; gain = 114.441 ; free physical = 1020 ; free virtual = 9970
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1467.246 ; gain = 572.051 ; free physical = 1020 ; free virtual = 9970
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 217 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -634,8 +795,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-64 Infos, 163 Warnings, 0 Critical Warnings and 0 Errors encountered.
+82 Infos, 240 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1464.469 ; gain = 492.711 ; free physical = 1703 ; free virtual = 10919
-report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1496.488 ; gain = 0.000 ; free physical = 1701 ; free virtual = 10917
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 20 12:34:05 2018...
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1483.262 ; gain = 512.508 ; free physical = 1020 ; free virtual = 9970
+report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1515.281 ; gain = 0.000 ; free physical = 1018 ; free virtual = 9969
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 26 18:27:25 2018...

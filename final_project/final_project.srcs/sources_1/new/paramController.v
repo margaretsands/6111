@@ -30,7 +30,7 @@ module paramController(
     output reg [9:0] value
     );
     
-    reg [9:0] wallDistance = 100;
+    reg [9:0] wallDistance = 150;
     reg [3:0] characterYSpeed = 4;
     reg [1:0] characterXSpeed = 1; 
     reg [3:0] count = 0;
@@ -46,7 +46,7 @@ module paramController(
         old_increase <= increase;
         old_decrease <= decrease;
         if (start) begin
-            data_bus <= {13'b0, wallDistance, characterYSpeed, characterXSpeed};
+            data_bus <= {13'b0, wallDistance, characterYSpeed, characterXSpeed}; // xspeed is [1:0], yspeed is [5:2], walldistance is [15:6]
         end
         else begin
             if (should_increase || should_decrease) begin

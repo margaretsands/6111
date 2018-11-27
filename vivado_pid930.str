@@ -1,0 +1,149 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+Process ID: 930
+
+Current time: 	11/19/18 6:25:57 PM EST
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: NAME="Ubuntu"
+Version: 4.2.0-42-generic
+Architecture: amd64
+Available processors (cores): 8
+
+DISPLAY: :1
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	/var/local/xilinx-local/Vivado/2016.2/tps/lnx64/jre
+
+User name: 	msands
+User home directory: /afs/athena.mit.edu/user/m/s/msands
+User working directory: /afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: /var/local/xilinx-local/Vivado
+RDI Data directory: /var/local/xilinx-local/Vivado/2016.2/data
+RDI Bin directory: /var/local/xilinx-local/Vivado/2016.2/bin
+
+Vivado preferences path: /afs/athena.mit.edu/user/m/s/msands/.Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: /afs/athena.mit.edu/user/m/s/msands/.Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	180 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,870 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 31 MB (+29958kb) [00:00:05]
+// [Engine Memory]: 4,870 MB (+4955126kb) [00:00:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,880 MB. GUI used memory: 22 MB. Current time: 11/19/18 6:25:59 PM EST
+selectList(PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, "/afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.xpr", 0); // q:v (JViewport:JComponent, cv:JFrame)
+// bL:g (cv:JFrame):  Open Project : addNotify
+// Opening Vivado Project: /afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.xpr. Version: Vivado v2016.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 43 MB (+11264kb) [00:00:22]
+// [GUI Memory]: 54 MB (+9196kb) [00:00:22]
+// [GUI Memory]: 58 MB (+1228kb) [00:00:23]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project /afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/var/local/xilinx-local/Vivado/2016.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,997 MB. GUI used memory: 27 MB. Current time: 11/19/18 6:26:14 PM EST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: final_project; location: /afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project; part: xc7a100tcsg324-3
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labkit (labkit_lab4.v)]", 1, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, labkit (labkit_lab4.v)]", 1, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// Elapsed time: 10 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+// [GUI Memory]: 62 MB (+510kb) [00:01:57]
+// [GUI Memory]: 65 MB (+682kb) [00:14:12]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 30 MB. Current time: 11/19/18 6:56:14 PM EST
+// [GUI Memory]: 69 MB (+302kb) [00:34:03]
+// [GUI Memory]: 73 MB (+362kb) [00:49:23]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/19/18 7:26:15 PM EST
+// [GUI Memory]: 76 MB (+63kb) [01:29:43]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 27 MB. Current time: 11/19/18 7:56:15 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/19/18 8:26:15 PM EST
+// [GUI Memory]: 81 MB (+500kb) [02:09:49]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 27 MB. Current time: 11/19/18 8:56:15 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 27 MB. Current time: 11/19/18 9:26:15 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/19/18 9:56:15 PM EST
+// [GUI Memory]: 85 MB (+558kb) [03:40:26]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/19/18 10:26:15 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/19/18 10:56:15 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/19/18 11:26:15 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/19/18 11:56:15 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 12:26:16 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 12:56:16 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 1:26:16 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 1:56:16 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 2:26:16 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 2:56:16 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 3:26:16 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 3:56:16 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 4:26:16 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 4:56:16 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 5:26:17 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 5:56:17 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 6:26:17 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 6:56:17 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 7:26:17 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 7:56:17 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 8:26:17 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 8:56:17 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 9:26:17 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 9:56:17 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 10:26:17 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 10:56:18 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 11:26:18 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 11:56:18 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 12:26:18 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 12:56:18 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 1:26:18 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,001 MB. GUI used memory: 28 MB. Current time: 11/20/18 1:56:18 PM EST
+// Elapsed time: 71075 seconds
+selectCodeEditor("labkit_lab4.v", 257, 565); // bH:N (JPanel:JComponent, cv:JFrame)
+// Elapsed time: 10 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ab:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ab:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // ab:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // ab:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // ab:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_CLOSE_PROJECT, "Close Project"); // af:JMenuItem (JPopupMenu:JComponent, Popup:JWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V:JideMenu (CommandMenuBar:CommandBar, cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+// G:be (cv:JFrame): Close Project: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, G:be)
+// bL:g (cv:JFrame):  Close Project : addNotify
+// TclEventType: PROJECT_CLOSE
+dismissDialog("Close Project"); // G:be (cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,014 MB. GUI used memory: 26 MB. Current time: 11/20/18 2:11:32 PM EST
+// Tcl Message: close_project 
+// Tcl Message: ****** Webtalk v2016.2 (64-bit)   **** SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016   **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.  source /afs/athena.mit.edu/user/m/s/msands/Desktop/6.111/finalproject/final_project/final_project.hw/webtalk/labtool_webtalk.tcl -notrace INFO: [Common 17-206] Exiting Webtalk at Tue Nov 20 14:11:33 2018... 
+dismissDialog("Close Project"); // bL:g (cv:JFrame)

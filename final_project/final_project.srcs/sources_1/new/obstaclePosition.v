@@ -36,21 +36,21 @@ module obstaclePosition(
     
     initial begin
         obstacleArray[0] = 10'd300;
-        obstacleArray[1] = 10'd430;
+        obstacleArray[1] = 10'd230;
         obstacleArray[2] = 10'd229;
         obstacleArray[3] = 10'd50;
-        obstacleArray[4] = 10'd429;
+        obstacleArray[4] = 10'd129;
         obstacleArray[5] = 10'd92;
-        obstacleArray[6] = 10'd356;
+        obstacleArray[6] = 10'd326;
         obstacleArray[7] = 10'd156;
     end
     
     
     parameter characterWidth = 64;
     parameter obstacleWidth = 50;
-    parameter spaceBetweenObstacles = 206; //previously 78
-    parameter indexShift = 8; // log(widthPerObstacle) so that we can find the current obstacle
-    parameter maximumVisible = 4; //previously 6
+    parameter spaceBetweenObstacles = 78; //previously 78
+    parameter indexShift = 7; // log(widthPerObstacle) so that we can find the current obstacle
+    parameter maximumVisible = 6; //previously 6
     parameter widthPerObstacle = obstacleWidth + spaceBetweenObstacles;
     
     //tried switching this to -
@@ -58,59 +58,25 @@ module obstaclePosition(
     
     wire [2:0] currentObstacle;
     reg [2:0] lowbound;
-    //x values are evenly distributed to each obstacle and with the same amount of space between so the x value of an obstacle is obstacle#*96
+    //x values are evenly distributed to each obstacle and with the same amount of space between so the x value of an obstacle is obstacle#*
     assign currentObstacle = characterX >> indexShift;
-    assign xCollision = characterX[6:0] > obstacleWidth;
-    
-//    reg [59:0] shift_output = 0;
-//    reg [79:0] shift_array;
-//    reg [2:0] indexCount = 0;
-    //have to make a shift register that gives up clock cycles to find the correct value in the array
+    assign xCollision = characterX[6:0] < obstacleWidth;
     
     wire [9:0] closestObstacle = (lowbound*widthPerObstacle > characterX) ? (lowbound*widthPerObstacle - characterX) + characterOffset : characterOffset-(characterX - lowbound*widthPerObstacle);
     wire [9:0] secondclosestObstacle = closestObstacle + widthPerObstacle;
     wire [9:0] thirdclosestObstacle = closestObstacle + 2*widthPerObstacle;
     wire [9:0] fourthclosestObstacle = closestObstacle + 3*widthPerObstacle;
-//    wire [9:0] fifthclosestObstacle = closestObstacle + 4*widthPerObstacle;
-//    wire [9:0] sixthclosestObstacle = closestObstacle + 5*widthPerObstacle;
-//    wire [9:0] secondclosestObstacle = (((lowbound+1)%numberOfObstacles)*widthPerObstacle > characterX) ? (((lowbound+1)%numberOfObstacles)*widthPerObstacle - characterX) + characterOffset: characterOffset -(characterX - ((lowbound+1)%numberOfObstacles)*widthPerObstacle);
-//    wire [9:0] thirdclosestObstacle = (((lowbound+2)%numberOfObstacles)*widthPerObstacle > characterX) ? (((lowbound+2)%numberOfObstacles)*widthPerObstacle - characterX) + characterOffset : characterOffset-(characterX - ((lowbound+2)%numberOfObstacles)*widthPerObstacle);
-//    wire [9:0] fourthclosestObstacle = (((lowbound+3)%numberOfObstacles)*widthPerObstacle > characterX) ? (((lowbound+3)%numberOfObstacles)*widthPerObstacle - characterX) + characterOffset : characterOffset-(characterX - ((lowbound+3)%numberOfObstacles)*widthPerObstacle);
-//    wire [9:0] fifthclosestObstacle = (((lowbound+4)%numberOfObstacles)*widthPerObstacle > characterX) ? (((lowbound+4)%numberOfObstacles)*widthPerObstacle - characterX) + characterOffset : characterOffset-(characterX - ((lowbound+4)%numberOfObstacles)*widthPerObstacle);
-//    wire [9:0] sixthclosestObstacle = (((lowbound+5)%numberOfObstacles)*widthPerObstacle > characterX) ? (((lowbound+5)%numberOfObstacles)*widthPerObstacle - characterX) + characterOffset : characterOffset-(characterX - ((lowbound+5)%numberOfObstacles)*widthPerObstacle);
+    wire [9:0] fifthclosestObstacle = closestObstacle + 4*widthPerObstacle;
+    wire [9:0] sixthclosestObstacle = closestObstacle + 5*widthPerObstacle;
     
     reg needUpdate = 0;
     //possibly rethink when to increment indexCount
     always @(clk) begin
-        lowbound <= characterX >= characterOffset ? (characterX-characterOffset) >> indexShift : (8*widthPerObstacle - (characterOffset- characterX)) >> indexShift;
-//        if (indexCount == 0) begin
-//            shift_array <= obstacleArray;
-//            indexCount <= indexCount + 1;
-//        end
-//        else if (indexCount < lowbound) begin
-//            shift_array <= {shift_array[69:0],shift_array[79:70]};
-//            indexCount <= indexCount + 1;
-//        end
-//        else if (indexCount == lowbound) begin
-//            shift_output <= shift_array[79:20];
-//            indexCount <= indexCount + 1;
-//        end
-//        if (updateState) begin
-            visibleObstaclesY <= {obstacleArray[lowbound],obstacleArray[lowbound+1],obstacleArray[lowbound+2],obstacleArray[lowbound+3], 20'd0};
-            visibleObstaclesX <= {closestObstacle, closestObstacle, thirdclosestObstacle, fourthclosestObstacle, 20'd0};
-//            visibleObstaclesY <= {obstacleArray[lowbound],obstacleArray[lowbound+1],obstacleArray[lowbound+2],obstacleArray[lowbound+3],obstacleArray[lowbound+4],obstacleArray[lowbound+5]};
-//            visibleObstaclesX <= {closestObstacle, closestObstacle, thirdclosestObstacle, fourthclosestObstacle, fifthclosestObstacle, sixthclosestObstacle};
-//        end
-//        else if ((updateState || needUpdate) &&  indexCount > lowbound) begin
-//            visibleObstaclesY <= shift_output;
-//            indexCount <= 0;
-//            needUpdate <= 0;
-//        end
-//        else begin
-//            needUpdate <= needUpdate ? needUpdate : updateState;
-//            visibleObstaclesX <= {closestObstacle, secondclosestObstacle, thirdclosestObstacle, fourthclosestObstacle, fifthclosestObstacle, sixthclosestObstacle};
-                    
-//        end
+        lowbound <= characterX >= characterOffset ? ((characterX-characterOffset) >> indexShift)-1 : ((8*widthPerObstacle - (characterOffset- characterX)) >> indexShift)-1;
+//        visibleObstaclesY <= {obstacleArray[lowbound],obstacleArray[lowbound+1],obstacleArray[lowbound+2],obstacleArray[lowbound+3], 20'd0};
+//        visibleObstaclesX <= {closestObstacle, closestObstacle, thirdclosestObstacle, fourthclosestObstacle, 20'd0};
+        visibleObstaclesY <= {obstacleArray[lowbound],obstacleArray[lowbound+1],obstacleArray[lowbound+2],obstacleArray[lowbound+3],obstacleArray[lowbound+4],obstacleArray[lowbound+5]};
+        visibleObstaclesX <= {closestObstacle, closestObstacle, thirdclosestObstacle, fourthclosestObstacle, fifthclosestObstacle, sixthclosestObstacle};
     end
     //visibility is determined by the x of a obstacle being between characterX-(320-.5*birdwidth) and characterX + 320 + .5*birdWidth from  and 
     

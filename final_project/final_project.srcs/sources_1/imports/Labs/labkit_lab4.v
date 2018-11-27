@@ -88,8 +88,8 @@ module labkit(
 //    vga vga1(.vga_clock(clock_25mhz),.hcount(hcount),.vcount(vcount),
 //      .hsync(hsync),.vsync(vsync),.at_display_area(at_display_area));
     assign LED = {13'b0, state} ; 
-//    assign data = {2'd0, param_value, character_x[19:0]};   // display 0123456 + SW
-    assign data = visibleObstaclesY[59:50];
+    assign data = {2'd0, param_value, character_x[19:0]};   // display 0123456 + SW
+//    assign data = visibleObstaclesY[59:50];
     assign VGA_R = at_display_area ? pixel[23:20] : 0;
     assign VGA_G = at_display_area ? pixel[16:13] :0;
     assign VGA_B = at_display_area ? pixel[7:4] :0;
@@ -151,7 +151,7 @@ module obstacleBlob
     output reg [23:0] pixel);
 
    always @ * begin
-      if ((hcount >= x && (x) > 1'd0 && hcount < (x+WIDTH)) &&
+      if ((hcount >= x && (x) > 0 && hcount < (x+WIDTH)) &&
 	 (vcount >= y && vcount < (y+height)))
 	pixel = COLOR;
       else pixel = 0;

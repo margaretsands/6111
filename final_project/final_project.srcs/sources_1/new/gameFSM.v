@@ -49,10 +49,10 @@ module gameFSM (
     reg [1:0] new_state = 1;
     reg old_start = 0;
     wire [3:0] character_y_speed;
-    wire [3:0] character_x_speed;
+    wire [1:0] character_x_speed;
     wire [9:0] wall_distance = 100;
     reg [9:0] height = 9'd200;
-    reg [31:0] new_x = 500;
+    reg [31:0] new_x = 0;
     reg count; 
     reg old_value_transmitting;
     reg [1:0] x_counter = 0;
@@ -90,7 +90,7 @@ module gameFSM (
     assign state = new_state;
     assign character_x = new_x;
     assign load = (old_start != start && start);
-    assign character_y_speed = current_data_bus[7:4];
-    assign character_x_speed = current_data_bus[3:0];
-    assign wall_distance = current_data_bus[17:8];
+    assign character_y_speed = current_data_bus[5:2];
+    assign character_x_speed = current_data_bus[1:0];
+    assign wall_distance = current_data_bus[15:6];
 endmodule
